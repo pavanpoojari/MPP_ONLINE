@@ -7,19 +7,17 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ecom-ecart Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<!-- -->
+	<properties>
+		<spring.version>4.3.4.RELEASE</spring.version>
+	</properties>
+
 	<dependencies>
-	<!--Linking backend to frontend-->
+		<!--Linking backend to frontend -->
 		<dependency>
 			<groupId>com.niit</groupId>
 			<artifactId>ecom-backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
 		</dependency>
 
 		<!--JAVA EE API -->
@@ -29,9 +27,34 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
+		<!-- -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>ecom-ecart</finalName>
+		<!-- FOR CHANGING THE JRE VERSION TO LATEST ONE -->
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
