@@ -10,6 +10,8 @@ public class PageController {
 	public ModelAndView index() {
 		
 		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title","Home");
+		mv.addObject("ifUserClickedHome","Home");
 		return mv;
 	}
 }
