@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WEBTEMP - ${title}</title>
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
-<!--<link rel="stylesheet" href="$${css}/bootstrap-theme.min.css">-->
+<!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
 <link rel="stylesheet" href="${css}/lstyle.css">
 </head>
 
@@ -59,9 +59,6 @@
 	<!-- End Of ImageSlider -->
 	<!-- Contain -->
 	<div class="container text-center">
-		<div class="tab-content">
-			<c:if test="">
-				<div class="tab-pane fade in active" id="Home">
 					<h2>Home</h2>
 					<hr>
 					<!-- Custom content -->
@@ -150,23 +147,7 @@
 					</div>
 					<!-- End Of Custom content -->
 				</div>
-			</c:if>
-
-			<div class="tab-pane fade" id="About_Us">
-				<h2>About Us</h2>
-				<hr>
-				<b>TEXT HERE</b>
-			</div>
-
-			<div class="tab-pane fade" id="Contact_Us">
-				<h2>Contact Us</h2>
-				<hr>
-				<b>TEXT HERE</b>
-			</div>
-			<hr>
-		</div>
-	</div>
-	<div id="Barrow" class="container-fliud text-right">
+			<div id="Barrow" class="container-fliud text-right">
 		<a class="btn btn-default up-arrow" href="#mypage"
 			data-toggle="tooltip" title="TO TOP"> <span
 			class="glyphicon glyphicon-chevron-up"></span>
