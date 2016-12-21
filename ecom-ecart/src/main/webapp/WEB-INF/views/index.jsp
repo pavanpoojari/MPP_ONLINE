@@ -12,7 +12,7 @@
 <meta name="description" content="WEBTEMP">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WEBTEMP - ${title}</title>
-<link rel="stylesheet" href="${css}/bootstrap.min.css">
+<link rel="stylesheet" href="${css}/bootstrap-flatly.css">
 <!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
 <link rel="stylesheet" href="${css}/lstyle.css">
 </head>
@@ -46,128 +46,243 @@
 					</div>
 				</div>
 			</div>
+			<!--
+			<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 
-			<a href="#screenshot-carousel" class="left carousel-control"
-				data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-
-			<a href="#screenshot-carousel" class="right carousel-control"
-				data-slide="next"><span
-				class="glyphicon glyphicon-chevron-right"></span></a>
-
+			<a href="#screenshot-carousel" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      -->
 		</div>
 	</div>
 	<!-- End Of ImageSlider -->
 	<!-- Contain -->
-	<div class="container text-center">
-					<h2>Home</h2>
-					<hr>
-					<!-- Custom content -->
-					<div class="container text-center">
-						<div class="row">
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="${images}/1.png" alt="...">
-									<div class="caption">
-										<hr>
-										<h3>Thumbnail label</h3>
-										<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-											quam. .</p>
-										<hr>
-										<p>
-											<a href="#" class="btn btn-primary" role="button">Button</a>
-											<a href="#" class="btn btn-default" role="button">Button</a>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="${images}/1.png" alt="...">
-									<div class="caption">
-										<hr>
-										<h3>Thumbnail label</h3>
-										<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-											quam. .</p>
-										<hr>
-										<p>
-											<a href="#" class="btn btn-primary" role="button">Button</a>
-											<a href="#" class="btn btn-default" role="button">Button</a>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="${images}/1.png" alt="...">
-									<div class="caption">
-										<hr>
-										<h3>Thumbnail label</h3>
-										<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-											quam. .</p>
-										<hr>
-										<p>
-											<a href="#" class="btn btn-primary" role="button">Button</a>
-											<a href="#" class="btn btn-default" role="button">Button</a>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="${images}/1.png" alt="...">
-									<div class="caption">
-										<hr>
-										<h3>Thumbnail label</h3>
-										<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-											quam. .</p>
-										<hr>
-										<p>
-											<a href="#" class="btn btn-primary" role="button">Button</a>
-											<a href="#" class="btn btn-default" role="button">Button</a>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 col-md-3">
-								<div class="thumbnail">
-									<img src="${images}/1.png" alt="...">
-									<div class="caption">
-										<hr>
-										<h3>Thumbnail label</h3>
-										<p>Cras justo odio, dapibus ac facilisis in, egestas eget
-											quam. .</p>
-										<hr>
-										<!--<hr>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> 
-                  <a href="#" class="btn btn-default" role="button">Button</a></p>-->
-									</div>
-								</div>
-							</div>
+	<!--<div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+    </div>-->
+	<div class="container">
+		<h2 class="text-center">Home</h2>
+		<hr>
+		<!-- Custom content -->
+		<div class="container-fliud">
+			<div class="row">
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="" />
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
 						</div>
 					</div>
-					<!-- End Of Custom content -->
 				</div>
-			<div id="Barrow" class="container-fliud text-right">
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="">
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="">
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="">
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">13 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="" />
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="" />
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="" />
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3 col-lg-3 col-md-4">
+					<div class="thumbnail">
+						<img src="${images}/1.png" alt="" />
+						<div class="caption">
+							<h4 class="pull-right">&#8377;150.99</h4>
+							<h4>
+								<a href="#">First Product</a>
+							</h4>
+							<p>
+								See more snippets like this online store item at <a
+									target="_blank" href="">Test - http://test.com</a>.
+							</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Of Custom content -->
+		<hr>
+	</div>
+
+	<div id="Barrow" class="container-fliud text-right">
 		<a class="btn btn-default up-arrow" href="#mypage"
 			data-toggle="tooltip" title="TO TOP"> <span
 			class="glyphicon glyphicon-chevron-up"></span>
 		</a>
 	</div>
 	<!-- End Of Contain -->
-	<!-- Footer -->
-	<footer>
-		<div class="container text-left">
-			<!--<a class="up-arrow" href="#mypage" data-toggle="tooltip" title="TO TOP">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br>-->
-			<p>
-				&copy;&nbsp;Pavan Poojary&nbsp;<a href="#pavanpoojary"
-					data-toggle="tooltip" title="Visit Site">
-					&nbsp;&nbsp;&nbsp;www.pavanpoojary.in</a>
-			</p>
-		</div>
-	</footer>
-	<!-- End Of Footer -->
+	
+		<%@include file="./shared/footer.jsp"%>
 
 	<script src="${js}/jquery.min.js"></script>
 	<script src="${js}/bootstrap.min.js"></script>

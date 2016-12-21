@@ -1,6 +1,7 @@
 package com.niit.ecom_ecart.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -8,10 +9,39 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 	@RequestMapping(value = { "/", "/home", "/index", "/default" })
 	public ModelAndView index() {
-		
+
 		ModelAndView mv = new ModelAndView("index");
-		mv.addObject("title","Home");
-		mv.addObject("ifUserClickedHome","Home");
+		mv.addObject("title", "Home");
+		mv.addObject("ifUserClickedHome", "Home");
 		return mv;
 	}
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
+
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title", "About");
+		mv.addObject("ifUserClickedAbout", "About");
+		return mv;
+	}
+	
+	/* for loading product page */
+	@RequestMapping(value = "/product/all")
+	public ModelAndView productList() {
+
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title", "Product List");
+		mv.addObject("ifUserClickedProductList", "ProductList");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/product/{id}")
+	public ModelAndView product(@PathVariable("id") int id) {
+
+		ModelAndView mv = new ModelAndView("index");
+		mv.addObject("title", "");
+		mv.addObject("id", id);
+		mv.addObject("ifUserClickedProduct", true);
+		return mv;
+	}
+	/* End of the loading product page */
 }
