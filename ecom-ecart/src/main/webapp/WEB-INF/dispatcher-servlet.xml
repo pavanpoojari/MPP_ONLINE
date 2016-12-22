@@ -19,7 +19,7 @@
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	<!-- to load resources -->
+	<!-- To Load Static Resources -->
 	<mvc:resources location="/resources/" mapping="/resources/**">
 	</mvc:resources>
 </beans>

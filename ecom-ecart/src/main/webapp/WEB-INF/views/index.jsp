@@ -1,26 +1,3 @@
-<%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<s:url value="/resources/css" var="css" />
-<s:url value="/resources/js" var="js" />
-<s:url value="/resources/images" var="images" />
-<c:set value="${pageContext.request.contextPath}" var="contextRoot" />
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="description" content="WEBTEMP">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WEBTEMP - ${title}</title>
-<link rel="stylesheet" href="${css}/bootstrap-flatly.css">
-<!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
-<link rel="stylesheet" href="${css}/lstyle.css">
-</head>
-
-
-
-<body id="mypage" data-spy="scroll" data-target="#my-navbar">
-	<%@include file="./shared/menu.jsp"%>
 	<!-- ImageSlider -->
 	<div class="container-fliud">
 		<div class="carousel slide" id="screenshot-carousel"
@@ -273,18 +250,3 @@
 		<!-- End Of Custom content -->
 		<hr>
 	</div>
-
-	<div id="Barrow" class="container-fliud text-right">
-		<a class="btn btn-default up-arrow" href="#mypage"
-			data-toggle="tooltip" title="TO TOP"> <span
-			class="glyphicon glyphicon-chevron-up"></span>
-		</a>
-	</div>
-	<!-- End Of Contain -->
-	
-		<%@include file="./shared/footer.jsp"%>
-
-	<script src="${js}/jquery.min.js"></script>
-	<script src="${js}/bootstrap.min.js"></script>
-</body>
-</html>

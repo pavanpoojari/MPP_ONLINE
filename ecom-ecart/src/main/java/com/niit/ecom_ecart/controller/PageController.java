@@ -10,17 +10,25 @@ public class PageController {
 	@RequestMapping(value = { "/", "/home", "/index", "/default" })
 	public ModelAndView index() {
 
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
-		mv.addObject("ifUserClickedHome", "Home");
+		mv.addObject("ifUserClickedHome", true);
 		return mv;
 	}
 	@RequestMapping(value = "/about")
 	public ModelAndView about() {
 
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "About");
-		mv.addObject("ifUserClickedAbout", "About");
+		mv.addObject("ifUserClickedAbout", true);
+		return mv;
+	}
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Contact");
+		mv.addObject("ifUserClickedContact", true);
 		return mv;
 	}
 	

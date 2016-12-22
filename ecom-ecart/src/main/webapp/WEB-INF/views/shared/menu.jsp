@@ -7,18 +7,18 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a href="index.html" class="navbar-brand"># WEBTEMP #</a>
+			<a href="${contextRoot}/index" class="navbar-brand"># WEBTEMP #</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<ul class="nav navbar-nav ">
-				<li class="active"><a href="index.html">Home</a>
-				<li><a href="about.html">About Us</a>
-				<li><a href="contact.html">Contact Us</a>
+				<li class="active"><a href="${contextRoot}/index">Home</a>
+				<li><a href="${contextRoot}/about">About Us</a>
+				<li><a href="${contextRoot}/contact">Contact Us</a>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="signup.html"><span
+				<li><a href="${contextRoot}/signup"><span
 						class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="login.html"><span
+				<li><a href="${contextRoot}/login"><span
 						class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 			<form class="navbar-form navbar-left">
