@@ -16,9 +16,13 @@
 <link rel="stylesheet" href="${css}/bootstrap-flatly.css">
 <!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
 <link rel="stylesheet" href="${css}/lstyle.css">
+
+<!-- Menu bar active -->
+    <script type="text/javascript">
+    	window.hoverMenu = '${title}';
+    </script>
+
 </head>
-
-
 
 <body id="mypage" data-spy="scroll" data-target="#my-navbar">
 	<%@include file="./shared/menu.jsp"%>
@@ -46,5 +50,6 @@
 	
 	<script src="${js}/jquery.min.js"></script>
 	<script src="${js}/bootstrap.min.js"></script>
+	<script src="${js}/lstyle.js"></script>
 </body>
 </html>

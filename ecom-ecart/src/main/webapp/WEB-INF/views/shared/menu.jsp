@@ -11,14 +11,14 @@
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<ul class="nav navbar-nav ">
-				<li class="active"><a href="${contextRoot}/index">Home</a>
-				<li><a href="${contextRoot}/about">About Us</a>
-				<li><a href="${contextRoot}/contact">Contact Us</a>
+				<li id="index"><a href="${contextRoot}/index">Home</a>
+				<li id="about"><a href="${contextRoot}/about">About Us</a>
+				<li id="contact"><a href="${contextRoot}/contact">Contact Us</a>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="${contextRoot}/signup"><span
+				<li id="signup"><a href="${contextRoot}/signup"><span
 						class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li><a href="${contextRoot}/login"><span
+				<li id="login"><a href="${contextRoot}/login"><span
 						class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 			<form class="navbar-form navbar-left">
