@@ -23,25 +23,21 @@
 <body id="mypage" data-spy="scroll" data-target="#my-navbar">
 	<%@include file="./shared/menu.jsp"%>
 	
+	<!-- To Load Index Page -->
 	<c:if test="${ifUserClickedHome == true}">	
 	<%@include file="index.jsp"%>
 	</c:if>
 	
+	<!-- To Load About Page -->
 	<c:if test="${ifUserClickedAbout == true}">	
 	<%@include file="about.jsp"%>
 	</c:if>
 	
+	<!-- To Load Contact Page -->
 	<c:if test="${ifUserClickedContact == true}">	
 	<%@include file="contact.jsp"%>
 	</c:if>
 	
-	<div id="Barrow" class="container-fliud text-right">
-		<a class="btn btn-default up-arrow" href="#mypage"
-			data-toggle="tooltip" title="TO TOP"> <span
-			class="glyphicon glyphicon-chevron-up"></span>
-		</a>
-	</div>
-	<!-- End Of Contain -->
 	
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>

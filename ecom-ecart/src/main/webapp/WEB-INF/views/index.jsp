@@ -250,3 +250,5 @@
 		<!-- End Of Custom content -->
 		<hr>
 	</div>
+
+	<%@include file="./shared/totop.jsp"%>
