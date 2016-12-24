@@ -2,6 +2,12 @@ $(function() {
 	
 	switch(hoverMenu) {
 	
+	case 'Sign Up':
+		$('#signup').addClass('active');
+		break;
+	case 'Login':
+		$('#login').addClass('active');
+		break;
 	case 'Contact Us':
 		$('#contact').addClass('active');
 		break;

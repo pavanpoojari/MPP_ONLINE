@@ -42,6 +42,15 @@
 	<%@include file="contact.jsp"%>
 	</c:if>
 	
+	<!-- To Load Sign Up Page -->
+	<c:if test="${ifUserClickedSignup == true}">	
+	<%@include file="signup.jsp"%>
+	</c:if>
+	
+	<!-- To Load Login Page -->
+	<c:if test="${ifUserClickedLogin == true}">	
+	<%@include file="login.jsp"%>
+	</c:if>
 	
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
