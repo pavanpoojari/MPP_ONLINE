@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="${css}/bootstrap-flatly.css">
 <!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
 <link rel="stylesheet" href="${css}/lstyle.css">
+<link rel="stylesheet" href="${css}/font-awesome.css">
 
 <!-- Menu bar active -->
     <script type="text/javascript">
