@@ -52,16 +52,16 @@ public class PageController {
 	@RequestMapping(value = "/product/all")
 	public ModelAndView productList() {
 
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Product List");
-		mv.addObject("ifUserClickedProductList", "ProductList");
+		mv.addObject("ifUserClickedProductList", true);
 		return mv;
 	}
 	
 	@RequestMapping(value = "/product/{id}")
 	public ModelAndView product(@PathVariable("id") int id) {
 
-		ModelAndView mv = new ModelAndView("index");
+		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "");
 		mv.addObject("id", id);
 		mv.addObject("ifUserClickedProduct", true);

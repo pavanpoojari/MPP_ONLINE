@@ -12,9 +12,9 @@
 <meta charset="utf-8">
 <meta name="description" content="WEBTEMP">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WEBTEMP - ${title}</title>
+<title>WebTemp - ${title}</title>
 <link rel="stylesheet" href="${css}/bootstrap-flatly.css">
-<!--<link rel="stylesheet" href="${css}/bootstrap-theme.min.css">-->
+<%-- <link rel="stylesheet" href="${css}/bootstrap-theme.min.css"> --%>
 <link rel="stylesheet" href="${css}/lstyle.css">
 <link rel="stylesheet" href="${css}/font-awesome.css">
 
@@ -51,6 +51,16 @@
 	<!-- To Load Login Page -->
 	<c:if test="${ifUserClickedLogin == true}">	
 	<%@include file="login.jsp"%>
+	</c:if>
+	
+	<!-- To Load Product Page -->
+	<c:if test="${ifUserClickedProduct == true}">	
+	<%@include file="product.jsp"%>
+	</c:if>
+	
+	<!-- To Load Product List Page -->
+	<c:if test="${ifUserClickedProductList == true}">	
+	<%@include file="productList.jsp"%>
 	</c:if>
 	
 	<!-- Footer -->

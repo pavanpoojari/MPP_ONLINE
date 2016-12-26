@@ -68,12 +68,12 @@
 											placeholder="Enter Contact Number" required="required" />
 									</div>
 								</div>
-								<div class="form-group">
-									<div class="input-group">
-										<span class="input-group-addon"> <input type="checkbox"
-											aria-label="...">
-										</span>
-										<p class="form-control" aria-label="...">t & c</p>
+								<div class="">
+									<div class="well-sm">
+										<p class="" aria-label="...">
+											<input type="checkbox" aria-label="...">&nbsp; I ,
+											agree with the Terms & Condition
+										</p>
 									</div>
 								</div>
 							</div>
