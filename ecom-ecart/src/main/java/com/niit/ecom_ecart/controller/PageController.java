@@ -1,12 +1,18 @@
 package com.niit.ecom_ecart.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.niit.backend.DAO.ProductDAO;
+
 @Controller
 public class PageController {
+	
+	@Autowired
+	private ProductDAO productDAO;
 	
 	@RequestMapping(value = { "/", "/home", "/index", "/default" })
 	public ModelAndView index() {
@@ -51,8 +57,12 @@ public class PageController {
 	/* for loading product page */
 	@RequestMapping(value = "/product/all")
 	public ModelAndView productList() {
-
 		ModelAndView mv = new ModelAndView("page");
+		/*
+		 * To Fetch the All Product from DataBase
+		 * */
+		mv.addObject("products",productDAO.list());
+		
 		mv.addObject("title", "Product List");
 		mv.addObject("ifUserClickedProductList", true);
 		return mv;

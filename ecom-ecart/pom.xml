@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ecom-ecart Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	<!-- -->
+	<!-- Spring-web Version -->
 	<properties>
 		<spring.version>4.3.4.RELEASE</spring.version>
 	</properties>
@@ -16,7 +16,7 @@
 		<!--Linking backend to frontend -->
 		<dependency>
 			<groupId>com.niit</groupId>
-			<artifactId>ecom-backend</artifactId>
+			<artifactId>backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

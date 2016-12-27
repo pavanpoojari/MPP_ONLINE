@@ -1,4 +1,4 @@
-package com.niit.ecom_backend;
+package com.niit.backend;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
