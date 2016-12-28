@@ -8,6 +8,9 @@ $(function() {
 	case 'Login':
 		$('#login').addClass('active');
 		break;
+	case 'Cart':
+		$('#cart').addClass('active');
+		break;
 	case 'Contact Us':
 		$('#contact').addClass('active');
 		break;

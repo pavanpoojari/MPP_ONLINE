@@ -54,6 +54,14 @@ public class PageController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/cart")
+	public ModelAndView cart() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Cart");
+		mv.addObject("ifUserClickedCart", true);
+		return mv;
+	}
+
 	/* for loading product page */
 	@RequestMapping(value = "/product/all")
 	public ModelAndView productList() {

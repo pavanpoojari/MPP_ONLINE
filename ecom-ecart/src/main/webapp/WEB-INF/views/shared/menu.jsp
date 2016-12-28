@@ -13,13 +13,18 @@
 			<ul class="nav navbar-nav ">
 				<li id="index"><a href="${contextRoot}/index">Home</a>
 				<li id="about"><a href="${contextRoot}/about">About Us</a>
-				<li id="contact"><a href="${contextRoot}/contact">Contact Us</a>
+				<li id="contact"><a href="${contextRoot}/contact">Contact
+						Us</a>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li id="signup"><a href="${contextRoot}/signup"><span
 						class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li id="login"><a href="${contextRoot}/login"><span
 						class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li id="cart"><a href="${contextRoot}/cart"
+					class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
+						class="badge">4</span>
+				</a></li>
 			</ul>
 			<form class="navbar-form navbar-left">
 				<div class="input-group">

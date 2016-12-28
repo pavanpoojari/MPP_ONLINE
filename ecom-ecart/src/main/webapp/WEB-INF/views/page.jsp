@@ -53,6 +53,11 @@
 	<%@include file="login.jsp"%>
 	</c:if>
 	
+	<!-- To Load Cart Page -->
+	<c:if test="${ifUserClickedCart == true}">	
+	<%@include file="cart.jsp"%>
+	</c:if>
+	
 	<!-- To Load Product Page -->
 	<c:if test="${ifUserClickedProduct == true}">	
 	<%@include file="product.jsp"%>

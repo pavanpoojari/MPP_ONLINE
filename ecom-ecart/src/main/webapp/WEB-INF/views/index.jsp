@@ -53,7 +53,7 @@
 					<div class="caption">
 						<h4 class="pull-right">&#8377;150.99</h4>
 						<h4>
-							<a href="">First Product</a>
+							<a href="${contextRoot}/product">First Product</a>
 						</h4>
 						<p>
 							See more snippets like this online store item at <a
