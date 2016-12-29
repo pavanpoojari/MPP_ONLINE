@@ -23,7 +23,7 @@
 						class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				<li id="cart"><a href="${contextRoot}/cart"
 					class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
-						class="badge">4</span>
+						class="badge">2</span>
 				</a></li>
 			</ul>
 			<form class="navbar-form navbar-left">
