@@ -14,11 +14,21 @@ public class PageController {
 	@Autowired
 	private ProductDAO productDAO;
 	
+	
+	
 	@RequestMapping(value = { "/", "/home", "/index", "/default" })
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
 		mv.addObject("ifUserClickedHome", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/Admin")
+	public ModelAndView admin() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Admin");
+		mv.addObject("ifUserClickedAdmin", true);
 		return mv;
 	}
 	

@@ -68,6 +68,11 @@
 	<%@include file="productList.jsp"%>
 	</c:if>
 	
+	<!-- To Load Admin Page -->
+	<c:if test="${ifUserClickedAdmin == true}">	
+	<%@include file="./admin/adminpanels.jsp"%>
+	</c:if>
+	
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
 	<!-- End Of Footer -->

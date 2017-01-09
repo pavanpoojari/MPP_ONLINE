@@ -42,4 +42,4 @@ $(document).ready(function(){
         });
         $('#back-to-top').tooltip('show');
 });
-/*End OfTo Top arrow*/
+/*End Of To Top arrow*/
