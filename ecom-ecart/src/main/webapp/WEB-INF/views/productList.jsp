@@ -61,173 +61,258 @@
 				<!--End Of Filter panel-->
 			</div>
 		</div>
+
+		<!--div col-md-9-->
 		<div class="col-md-9">
 			<div class="">
-				<!--List-->
 				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-md-2" style="padding: 0px;">
-							<img src="${images}/1.png" alt="" width="120px"
-								height="120px" />
-						</div>
-						<div class="col-md-6" style="padding: 0px;">
-							TITLE<br />
-							<div class="text-muted">Lorem Ipsum is simply dummy text of
-								the printing and typesetting industry. Lorem Ipsum has been the
-								industry's standard dummy text ever since the 1500s</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">&#8377;720</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">
-								<div class="col-md-1" style="padding: 0px;">
-									<button type="submit" class="btn btn-info btn-sm" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;
-										Add To Wish list
-									</button>
-									<div class="col-md-2">
-										&nbsp;
-										<button type="submit" class="btn btn-warning btn-sm" id="">
-											<span class="fa fa-shopping-cart" aria-hidden="true"></span>&nbsp;
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="panel-heading" style="font-size: 18px">
+						<a data-toggle="tab" href="#list" data-toggle="tooltip"
+							data-placement="top" title="List View"><span
+							class="fa fa-th-list"></span></a>&nbsp; <a data-toggle="tab"
+							href="#grid" data-toggle="tooltip" data-placement="top"
+							title="Grid View"><span class="fa fa-th-large"></span> </a>
 					</div>
 				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-md-2" style="padding: 0px;">
-							<img src="${images}/1.png" alt="" width="120px"
-								height="120px" />
-						</div>
-						<div class="col-md-6" style="padding: 0px;">
-							TITLE<br />
-							<div class="text-muted">Lorem Ipsum is simply dummy text of
-								the printing and typesetting industry. Lorem Ipsum has been the
-								industry's standard dummy text ever since the 1500s</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">&#8377;720</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">
-								<div class="col-md-1" style="padding: 0px;">
-									<button type="submit" class="btn btn-info btn-sm" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;
-										Add To Wish list
-									</button>
-									<div class="col-md-3">
-										&nbsp;
-										<button type="submit" class="btn btn-warning btn-sm" id="">
-											<span class="fa fa-shopping-cart" aria-hidden="true"></span>&nbsp;
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="tab-content">
 
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-md-2" style="padding: 0px;">
-							<img src="${images}/1.png" alt="" width="120px"
-								height="120px" />
-						</div>
-						<div class="col-md-6" style="padding: 0px;">
-							TITLE<br />
-							<div class="text-muted">Lorem Ipsum is simply dummy text of
-								the printing and typesetting industry. Lorem Ipsum has been the
-								industry's standard dummy text ever since the 1500s</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">&#8377;720</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">
-								<div class="col-md-1" style="padding: 0px;">
-									<button type="submit" class="btn btn-info btn-sm" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;
-										Add To Wish list
-									</button>
-									<div class="col-md-3">
-										&nbsp;
-										<button type="submit" class="btn btn-warning btn-sm" id="">
-											<span class="fa fa-shopping-cart" aria-hidden="true"></span>&nbsp;
-											Add to Cart
-										</button>
+					<!--End Of list View-->
+					<div id="list" class="tab-pane fade in active">
+						<!--List-->
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="col-md-2" style="padding: 0px;">
+									<img src="${images}/1.png" alt="" width="120px" height="120px" />
+								</div>
+								<div class="col-md-6" style="padding: 0px;">
+									TITLE<br />
+									<div class="text-muted">Lorem Ipsum is simply dummy text
+										of the printing and typesetting industry. Lorem Ipsum has been
+										the industry's standard dummy text ever since the 1500s</div>
+								</div>
+								<div class="col-md-2" style="padding: 0px;">
+									<div class="text-center">
+										<h4>&#8377; 720</h4>
 									</div>
+								</div>
+								<div class="col-md-2 text-right">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									<br> <br>
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
-				<div class="panel panel-default">
-					<div class="panel-body">
-						<div class="col-md-2" style="padding: 0px;">
-							<img src="${images}/1.png" alt="" width="120px"
-								height="120px" />
-						</div>
-						<div class="col-md-6" style="padding: 0px;">
-							TITLE<br />
-							<div class="text-muted">Lorem Ipsum is simply dummy text of
-								the printing and typesetting industry. Lorem Ipsum has been the
-								industry's standard dummy text ever since the 1500s</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">&#8377;720</div>
-						</div>
-						<div class="col-md-2" style="padding: 0px;">
-							<div class="text-center">
-								<div class="col-md-1" style="padding: 0px;">
-									<button type="submit" class="btn btn-info btn-sm" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;
-										Add To Wish list
-									</button>
-									<div class="col-md-3">
-										&nbsp;
-										<button type="submit" class="btn btn-warning btn-sm" id="">
-											<span class="fa fa-shopping-cart" aria-hidden="true"></span>&nbsp;
-											Add to Cart
-										</button>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="col-md-2" style="padding: 0px;">
+									<img src="${images}/1.png" alt="" width="120px" height="120px" />
+								</div>
+								<div class="col-md-6" style="padding: 0px;">
+									TITLE<br />
+									<div class="text-muted">Lorem Ipsum is simply dummy text
+										of the printing and typesetting industry. Lorem Ipsum has been
+										the industry's standard dummy text ever since the 1500s</div>
+								</div>
+								<div class="col-md-2" style="padding: 0px;">
+									<div class="text-center">
+										<h4>&#8377; 720</h4>
 									</div>
+								</div>
+								<div class="col-md-2 text-right">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									<br> <br>
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
 								</div>
 							</div>
 						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="col-md-2" style="padding: 0px;">
+									<img src="${images}/1.png" alt="" width="120px" height="120px" />
+								</div>
+								<div class="col-md-6" style="padding: 0px;">
+									TITLE<br />
+									<div class="text-muted">Lorem Ipsum is simply dummy text
+										of the printing and typesetting industry. Lorem Ipsum has been
+										the industry's standard dummy text ever since the 1500s</div>
+								</div>
+								<div class="col-md-2" style="padding: 0px;">
+									<div class="text-center">
+										<h4>&#8377; 720</h4>
+									</div>
+								</div>
+								<div class="col-md-2 text-right">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									<br> <br>
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="col-md-2" style="padding: 0px;">
+									<img src="${images}/1.png" alt="" width="120px" height="120px" />
+								</div>
+								<div class="col-md-6" style="padding: 0px;">
+									TITLE<br />
+									<div class="text-muted">Lorem Ipsum is simply dummy text
+										of the printing and typesetting industry. Lorem Ipsum has been
+										the industry's standard dummy text ever since the 1500s</div>
+								</div>
+								<div class="col-md-2" style="padding: 0px;">
+									<div class="text-center">
+										<h4>&#8377; 720</h4>
+									</div>
+								</div>
+								<div class="col-md-2 text-right">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									<br> <br>
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--End Of list-->
 					</div>
+					<!--End Of list View-->
+
+					<!--Grid View-->
+					<div id="grid" class="tab-pane fade">
+
+						<!--Product-->
+						<div class="col-sm-4 col-lg-4 col-md-5">
+							<div class="thumbnail">
+								<img src="${images}/1.png" alt="" />
+								<div class="caption">
+									<h4 class="pull-right">&#8377;150.99</h4>
+									<h4>
+										<a href="#">First Product</a>
+									</h4>
+									<p>
+										See more snippets like this online store item at <a
+											target="_blank" href="">Test - http://test.com</a>.
+									</p>
+								</div>
+								<div class="text-right"
+									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									&nbsp;
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--End Of Product-->
+
+						<!--Product-->
+						<div class="col-sm-4 col-lg-4 col-md-5">
+							<div class="thumbnail">
+								<img src="${images}/1.png" alt="" />
+								<div class="caption">
+									<h4 class="pull-right">&#8377;150.99</h4>
+									<h4>
+										<a href="#">First Product</a>
+									</h4>
+									<p>
+										See more snippets like this online store item at <a
+											target="_blank" href="">Test - http://test.com</a>.
+									</p>
+								</div>
+								<div class="text-right"
+									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									&nbsp;
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--End Of Product-->
+
+						<!--Product-->
+						<div class="col-sm-4 col-lg-4 col-md-5">
+							<div class="thumbnail">
+								<img src="${images}/1.png" alt="" />
+								<div class="caption">
+									<h4 class="pull-right">&#8377;150.99</h4>
+									<h4>
+										<a href="#">First Product</a>
+									</h4>
+									<p>
+										See more snippets like this online store item at <a
+											target="_blank" href="">Test - http://test.com</a>.
+									</p>
+								</div>
+								<div class="text-right"
+									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									&nbsp;
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--End Of Product-->
+						<!--Product-->
+						<div class="col-sm-4 col-lg-4 col-md-5">
+							<div class="thumbnail">
+								<img src="${images}/1.png" alt="" />
+								<div class="caption">
+									<h4 class="pull-right">&#8377;150.99</h4>
+									<h4>
+										<a href="#">First Product</a>
+									</h4>
+									<p>
+										See more snippets like this online store item at <a
+											target="_blank" href="">Test - http://test.com</a>.
+									</p>
+								</div>
+								<div class="text-right"
+									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+									<button type="submit" class="btn btn-info" id="">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+									&nbsp;
+									<button type="submit" class="btn btn-warning" id="">
+										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--End Of Product-->
+					</div>
+					<!--End Of Grid View-->
 				</div>
-				<!--End Of list-->
 			</div>
 		</div>
+		<!--End Of div col-md-9-->
 	</div>
 </div>
-<!--  <br>
-  <blockquote>
-    <h2>Product Name</h2>
-  </blockquote>-->
-
-<!--
-  <table class="table table-condensed" style="width:100px" >
-     <tr>
-      <th colspan="2"><img src="${images}/3.png" width="430px"/></th>
-     </tr>
-     <tr>
-      <th><img src="${images}/3.png" width="100px"/></th>
-      <th><img src="${images}/3.png" width="100px"/></th>
-      <th><img src="${images}/3.png" width="100px"/></th>
-      <th><img src="${images}/3.png" width="100px"/></th>
-     </tr>
-     <tr style="margin:0 auto">
-       <th><button type="button" class="btn btn-primary">View Demo</button></th>
-       <th><button type="button" class="btn btn-warning">Add to Cart</button></th>
-     </tr>
-  </table>-->
-
-<!-- End Of Container -->
