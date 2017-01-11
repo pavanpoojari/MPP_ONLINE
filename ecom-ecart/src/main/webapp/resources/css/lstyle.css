@@ -158,3 +158,23 @@ hr.small {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:#b0b0b0;
 }
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.well{
+  box-shadow: 1px 1px 1px 3px #E4E4E4;
+}
+
+#B6size{
+    height:50px;
+    width: 270px;
+    border-radius: 1px;
+}
+#B7size{
+    height:50px;
+    width: 155px;
+    border-radius: 1px;
+}

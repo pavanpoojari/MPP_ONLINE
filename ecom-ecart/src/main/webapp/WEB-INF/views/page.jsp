@@ -72,6 +72,10 @@
 	<c:if test="${ifUserClickedAdmin == true}">	
 	<%@include file="./admin/adminpanels.jsp"%>
 	</c:if>
+
+	<c:if test="${ifUserClickedProfile == true}">	
+	<%@include file="./user/userpanels.jsp"%>
+	</c:if>
 	
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
