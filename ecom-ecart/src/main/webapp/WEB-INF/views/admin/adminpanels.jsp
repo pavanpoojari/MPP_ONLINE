@@ -109,10 +109,10 @@
 						</div>
 					</div>
 
-					<div class="col-md-2">
+					<!-- <div class="col-md-2">
 						<button id="B7size" type="submit" class="btn btn-primary"
 							id="btnSignup">View All Product</button>
-					</div>
+					</div> -->
 
 				</div>
 				<!--End Of Add Product-->

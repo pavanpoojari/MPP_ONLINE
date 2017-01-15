@@ -24,22 +24,6 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/Admin")
-	public ModelAndView admin() {
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "Admin");
-		mv.addObject("ifUserClickedAdmin", true);
-		return mv;
-	}
-	
-	@RequestMapping(value = "/UserProfile")
-	public ModelAndView Profile() {
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "User Profile");
-		mv.addObject("ifUserClickedProfile", true);
-		return mv;
-	}
-	
 	@RequestMapping(value = "/about")
 	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("page");

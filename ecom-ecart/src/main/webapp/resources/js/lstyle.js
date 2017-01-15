@@ -17,12 +17,16 @@ $(function() {
 	case 'About Us':
 		$('#about').addClass('active');
 		break;
+	case 'Admin':
+		$('#admin').addClass('active');
+		break;
+		
 	default: 
 		$('#index').addClass('active');
 		break;	
 	}
 });
-
+admin
 /*To Top arrow*/
 $(document).ready(function(){
      $(window).scroll(function () {

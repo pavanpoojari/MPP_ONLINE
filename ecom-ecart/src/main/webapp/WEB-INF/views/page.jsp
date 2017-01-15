@@ -1,6 +1,8 @@
 <%-- All the tag libraries are included here --%>
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
 <s:url value="/resources/images" var="images" />
@@ -14,7 +16,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WebTemp - ${title}</title>
 <link rel="stylesheet" href="${css}/bootstrap-flatly.css">
-<%-- <link rel="stylesheet" href="${css}/bootstrap-theme.min.css"> --%>
 <link rel="stylesheet" href="${css}/lstyle.css">
 <link rel="stylesheet" href="${css}/font-awesome.css">
 

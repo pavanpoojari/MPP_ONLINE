@@ -25,15 +25,18 @@
 					class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
 						class="badge">2</span>
 				</a></li>
+				<li id="admin"><a href="${contextRoot}/admin"><span
+						class="fa fa-id-badge"></span> Admin </a></li>
+				<%-- 
 				<li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="adminindex.html"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Admin
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="${contextRoot}/admin"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Admin
                             <span class="caret"></span></a>
                                 <ul class="dropdown-menu" >
                                     <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Product</a></li>
                                     <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Developer</a></li>
                                     <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Categories</a></li>
                                 </ul>
-                    </li>
+                    </li> --%>
 			</ul>
 			<form class="navbar-form navbar-left">
 				<div class="input-group">
