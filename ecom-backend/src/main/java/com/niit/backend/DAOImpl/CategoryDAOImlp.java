@@ -8,34 +8,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.backend.DAO.ProductDAO;
-import com.niit.backend.entity.Product;
+import com.niit.backend.DAO.CategoryDAO;
+import com.niit.backend.entity.Category;
 
-@Repository("productDAO")
-public class ProductDAOImpl implements ProductDAO {
+@Repository("categoryDAO")
+public class CategoryDAOImlp implements CategoryDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
 	@Transactional
-	public Product get(int id) {
-		return(Product)sessionFactory.getCurrentSession().get(Product.class, id);
+	public Category get(int id) {
+		return (Category) sessionFactory.getCurrentSession().get(Category.class, id);
 	}
 
 	@Override
 	@Transactional
-	public List<Product> list() {
-		String hql = " FROM PRODUCT ";
+	public List<Category> list() {
+		String hql = " FROM CATEGORY ";
 		return sessionFactory.getCurrentSession().createQuery(hql).list();
 	}
 
 	@Override
 	@Transactional
-	public boolean create(Product product) {
+	public boolean create(Category category) {
 		
 		try {
-			sessionFactory.getCurrentSession().save(product);
+			sessionFactory.getCurrentSession().save(category);
 			return true;
 		} catch (HibernateException e) {
 			return false;
@@ -45,25 +45,28 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	@Transactional
-	public boolean delete(Product product) {
+	public boolean delete(Category category) {
+		
 		try {
-			sessionFactory.getCurrentSession().delete(product);
+			sessionFactory.getCurrentSession().delete(category);
 			return true;
 		} catch (HibernateException e) {
 			return false;
 		}
+		
 	}
 
 	@Override
 	@Transactional
-	public boolean saveOrUpdate(Product product) {
+	public boolean saveOrUpdate(Category category) {
 		
 		try {
-			sessionFactory.getCurrentSession().saveOrUpdate(product);
+			sessionFactory.getCurrentSession().saveOrUpdate(category);
 			return true;
 		} catch (HibernateException e) {
 			return false;
 		}
+		
 	}
-	
+
 }

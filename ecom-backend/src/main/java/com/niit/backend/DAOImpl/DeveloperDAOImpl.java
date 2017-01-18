@@ -8,34 +8,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.niit.backend.DAO.ProductDAO;
-import com.niit.backend.entity.Product;
+import com.niit.backend.DAO.DeveloperDAO;
+import com.niit.backend.entity.Developer;
 
-@Repository("productDAO")
-public class ProductDAOImpl implements ProductDAO {
-	
+@Repository("developerDAO")
+public class DeveloperDAOImpl implements DeveloperDAO {
+
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
 	@Transactional
-	public Product get(int id) {
-		return(Product)sessionFactory.getCurrentSession().get(Product.class, id);
+	public Developer get(int id) {
+		return (Developer) sessionFactory.getCurrentSession().get(Developer.class, id);
 	}
 
 	@Override
 	@Transactional
-	public List<Product> list() {
-		String hql = " FROM PRODUCT ";
+	public List<Developer> list() {
+		String hql = " FROM DEVELOPER ";
 		return sessionFactory.getCurrentSession().createQuery(hql).list();
 	}
 
 	@Override
 	@Transactional
-	public boolean create(Product product) {
+	public boolean create(Developer developer) {
 		
 		try {
-			sessionFactory.getCurrentSession().save(product);
+			sessionFactory.getCurrentSession().save(developer);
+			return true;
+		} catch (HibernateException e) {
+			return false;
+		}
+
+	}
+
+	@Override
+	@Transactional
+	public boolean delete(Developer developer) {
+		
+		try {
+			sessionFactory.getCurrentSession().delete(developer);
 			return true;
 		} catch (HibernateException e) {
 			return false;
@@ -45,25 +58,15 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	@Transactional
-	public boolean delete(Product product) {
-		try {
-			sessionFactory.getCurrentSession().delete(product);
-			return true;
-		} catch (HibernateException e) {
-			return false;
-		}
-	}
-
-	@Override
-	@Transactional
-	public boolean saveOrUpdate(Product product) {
+	public boolean saveOrUpdate(Developer developer) {
 		
 		try {
-			sessionFactory.getCurrentSession().saveOrUpdate(product);
+			sessionFactory.getCurrentSession().saveOrUpdate(developer);
 			return true;
 		} catch (HibernateException e) {
 			return false;
 		}
+		
 	}
-	
+
 }
