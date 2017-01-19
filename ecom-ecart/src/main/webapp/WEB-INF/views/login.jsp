@@ -1,3 +1,5 @@
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <div class="container">
 	<hr>
 	<h1 class="text-center">
@@ -9,7 +11,8 @@
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
 				<div class="well well-sm">
-					<form>
+					<form:form id="loginForm" action="${contextRoot}/login" role="form"
+						method="POST">
 						<div class="row">
 							<div class="col-md-12 text-center">
 								<span class="fa fa-user-circle-o" style="font-size: 120px"></span>
@@ -20,8 +23,8 @@
 									<label for="email"> Email Address</label>
 									<div class="input-group">
 										<span class="input-group-addon"><span
-											class="glyphicon glyphicon-envelope"></span> </span> <input
-											type="email" class="form-control" id="email"
+											class="glyphicon glyphicon-envelope"></span> </span> 
+											<input type="text" class="form-control" id="username" name="username"
 											placeholder="Enter email" required="required" />
 									</div>
 								</div>
@@ -30,18 +33,18 @@
 									<div class="input-group">
 										<span class="input-group-addon"><span
 											class="glyphicon glyphicon-lock"></span> </span> <input
-											type="password" class="form-control" id="password"
+											type="password" class="form-control" id="password" name="password"
 											placeholder="Enter password" required="required" />
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-12 text-center">
+							<div class="form-group col-md-12 text-center">
 								<button id="B2size" type="submit" class="btn btn-primary"
 									id="btnLogin">Login</button>
 							</div>
 						</div>
-					</form>
+					</form:form>
 				</div>
 			</div>
 		</div>

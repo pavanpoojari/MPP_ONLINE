@@ -25,19 +25,22 @@
 					class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
 						class="badge">2</span>
 				</a></li>
-				<li id="admin"><a href="${contextRoot}/admin"><span
+				<li id="admin"><a href="${contextRoot}/admin/panels"><span
 						class="fa fa-id-badge"></span> Admin </a></li>
-				<%-- 
+				
 				<li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="${contextRoot}/admin"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Admin
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="${contextRoot}/user"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;User
                             <span class="caret"></span></a>
                                 <ul class="dropdown-menu" >
-                                    <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Product</a></li>
-                                    <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Developer</a></li>
-                                    <li><a href="#"><span class="fa fa-id-badge"></span>&nbsp;&nbsp;Add Categories</a></li>
+                                    <li><a href="#"><span class=""></span>&nbsp;&nbsp;User Profile</a></li>
+                                    <li><a href="#"><span class=""></span>&nbsp;&nbsp;Purchased Histroy</a></li>
+                                    <li><a href="#"><span class=""></span>&nbsp;&nbsp;Billing Histroy</a></li>
+                                    <li><a href="#"><span class=""></span>&nbsp;&nbsp;My Wishlist</a></li>
                                 </ul>
-                    </li> --%>
+                    </li> 
+                     <%-- <li><a href="${contextRoot}/" class="btn btn-primary navbar-btn"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> --%>
 			</ul>
+			
 			<form class="navbar-form navbar-left">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search for...">
@@ -48,6 +51,7 @@
 					</span>
 				</div>
 			</form>
+			
 		</div>
 	</div>
 </nav>

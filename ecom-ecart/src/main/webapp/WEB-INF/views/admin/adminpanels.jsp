@@ -1,3 +1,5 @@
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <div class="container" style="padding-top: 50px">
 	<div class="panel panel-success" style="padding: 5px">
 		<ul class="nav nav-tabs nav-justified">
@@ -21,7 +23,9 @@
 					</div>
 					<div class="col-md-8">
 						<div class="well">
-							<form>
+							<form:form method="POST"
+								action="${contextRoot}/admin/saveproduct" class="form"
+								role="form" modelAttribute="product">
 								<div class="row">
 
 									<div class="col-md-1"></div>
@@ -105,7 +109,7 @@
 											id="btnReset">RESET</button>
 									</div>
 								</div>
-							</form>
+								</form:form>
 						</div>
 					</div>
 
