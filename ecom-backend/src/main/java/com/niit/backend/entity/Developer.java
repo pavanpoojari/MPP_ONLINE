@@ -8,8 +8,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-@Entity
-@Table(name="developer")
+@Entity(name="DEVELOPER")
 @Component
 public class Developer {
 	

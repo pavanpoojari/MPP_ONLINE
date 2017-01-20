@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,8 +27,10 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	@Transactional
 	public List<Product> list() {
-		String hql = " FROM PRODUCT ";
-		return sessionFactory.getCurrentSession().createQuery(hql).list();
+		String hql = "FROM PRODUCT";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println(query.list());
+		return query.list();
 	}
 
 	@Override
@@ -67,6 +70,12 @@ public class ProductDAOImpl implements ProductDAO {
 			return false;
 		}
 		
+	}
+
+	@Override
+	@Transactional
+	public Product getByCategory(int categoryId) {
+		return (Product) sessionFactory.getCurrentSession().get(Product.class, categoryId);
 	}
 	
 }

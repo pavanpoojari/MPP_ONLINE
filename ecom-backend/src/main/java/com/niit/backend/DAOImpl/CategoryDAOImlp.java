@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,8 +27,10 @@ public class CategoryDAOImlp implements CategoryDAO {
 	@Override
 	@Transactional
 	public List<Category> list() {
-		String hql = " FROM CATEGORY ";
-		return sessionFactory.getCurrentSession().createQuery(hql).list();
+		String hql = "FROM CATEGORY";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println(query.list());
+		return query.list();
 	}
 
 	@Override

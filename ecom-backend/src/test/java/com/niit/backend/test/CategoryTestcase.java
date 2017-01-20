@@ -30,13 +30,13 @@ public class CategoryTestcase {
 		}
 		
 		//Adding the Category
-		 @Test 
+		 /*@Test 
 		 public void createCategoryTest() { 
-			 category.setId(6);
-			 category.setName("Computer");
-			 category.setDescription("This is Dummy Computer");
+			 //category.setId(6);
+			 category.setName("test");
+			 category.setDescription("This is Dummy test");
 			 Assert.assertEquals(true, categoryDAO.create(category));
-		 }
+		 }*/
 		
 		//Delete CategoryTable
 		/*@Test
@@ -53,11 +53,11 @@ public class CategoryTestcase {
 		}*/
 		
 		//To Fetch All Product From ProductTable
-		/*@Test
+		@Test
 		public void getAllCategoryTest(){
 			int size = categoryDAO.list().size();
-			Assert.assertEquals(4, size);
-		}*/
+			Assert.assertEquals(7, size);
+		}
 		
 		//Update ProductTable
 		/*@Test

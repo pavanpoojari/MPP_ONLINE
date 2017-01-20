@@ -9,7 +9,10 @@ public interface ProductDAO {
 	public Product get(int id);
 	public List<Product> list();
 	
+	public Product getByCategory(int categoryId);
+	
 	public boolean create(Product product);
 	public boolean delete(Product product);
 	public boolean saveOrUpdate(Product product);
+	
 }

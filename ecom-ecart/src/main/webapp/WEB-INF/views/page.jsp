@@ -2,6 +2,7 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
@@ -49,7 +50,8 @@
 	<%@include file="signup.jsp"%>
 	</c:if>
 	
-	<!-- To Load Login Page -->
+	<!-- To Load Login Page-->
+	
 	<c:if test="${ifUserClickedLogin == true}">	
 	<%@include file="login.jsp"%>
 	</c:if>
@@ -70,10 +72,10 @@
 	</c:if>
 	
 	<!-- To Load Admin Page -->
-	<c:if test="${ifUserClickedAdmin == true}">	
+	<c:if test="${ifAdminClickedAdmin == true}">	
 	<%@include file="./admin/adminpanels.jsp"%>
 	</c:if>
-
+	
 	<c:if test="${ifUserClickedProfile == true}">	
 	<%@include file="./user/userpanels.jsp"%>
 	</c:if>
