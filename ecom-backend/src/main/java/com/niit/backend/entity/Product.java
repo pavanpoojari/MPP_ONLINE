@@ -41,6 +41,8 @@ public class Product implements Serializable {
 	@Transient
 	private MultipartFile image;
 	
+	@Transient
+	private String imageUrl;
 	
 	/*
 	 * Getter & Setter
@@ -96,12 +98,21 @@ public class Product implements Serializable {
 		this.image = image;
 	}
 
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	
+	
 	/*
 	 * ToString
 	 * */
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", categoryId=" + categoryId + ", developerId=" + developerId
-				+ ", name=" + name + ", description=" + description + ", price=" + price + ", image=" + image + "]";
+				+ ", name=" + name + ", description=" + description + ", price=" + price + ", image=" + image
+				+ ", imageUrl=" + imageUrl + "]";
 	}
 }

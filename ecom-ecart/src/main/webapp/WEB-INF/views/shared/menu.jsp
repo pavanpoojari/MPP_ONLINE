@@ -10,23 +10,28 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a href="${contextRoot}/index" class="navbar-brand"># WEBTEMP #</a>
+			<a href="${contextRoot}/" class="navbar-brand"># WEBTEMP #</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<ul class="nav navbar-nav ">
-				<li id="index"><a href="${contextRoot}/index">Home</a>
+				<li id="index"><a href="${contextRoot}/">Home</a>
 				<li id="about"><a href="${contextRoot}/about">About Us</a>
 				<li id="contact"><a href="${contextRoot}/contact">Contact
 						Us</a>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 
+				<li id="allProduct"><a href="${contextRoot}/product/all"><span
+						class=""></span>All Products</a></li>
+
 				<sec:authorize access="isAnonymous()">
+
 					<li id="signup"><a href="${contextRoot}/signup"><span
 							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
 					<li id="login"><a href="${contextRoot}/login"><span
 							class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('Role_User')">
@@ -37,25 +42,13 @@
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('Role_Admin')">
-					<li id="admin"><a href="${contextRoot}/admin/panels"><span
+					<li id="admin"><a href="${contextRoot}/admin/AddProduct"><span
 							class="fa fa-id-badge"></span> Admin </a></li>
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('Role_User')">
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="${contextRoot}/user"><span
-							class="fa fa-id-badge"></span>&nbsp;&nbsp;User <span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#"><span class=""></span>&nbsp;&nbsp;User
-									Profile</a></li>
-							<li><a href="#"><span class=""></span>&nbsp;&nbsp;Purchased
-									Histroy</a></li>
-							<li><a href="#"><span class=""></span>&nbsp;&nbsp;Billing
-									Histroy</a></li>
-							<li><a href="#"><span class=""></span>&nbsp;&nbsp;My
-									Wishlist</a></li>
-						</ul></li>
+					<li id=""><a href="${contextRoot}/user/userprofile"><span
+							class="fa fa-id-badge"></span> User </a></li>
 				</sec:authorize>
 
 				<sec:authorize access="isAuthenticated()">

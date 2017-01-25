@@ -72,4 +72,10 @@ public class CategoryDAOImlp implements CategoryDAO {
 		
 	}
 
+	@Override
+	@Transactional
+	public Category getCategory(int id) {
+		return sessionFactory.getCurrentSession().get(Category.class, id);
+	}
+
 }

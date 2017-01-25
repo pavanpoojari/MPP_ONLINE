@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!-- Container -->
 <br>
 <br>
@@ -80,117 +82,33 @@
 					<!--End Of list View-->
 					<div id="list" class="tab-pane fade in active">
 						<!--List-->
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="col-md-2" style="padding: 0px;">
-									<img src="${images}/1.png" alt="" width="120px" height="120px" />
-								</div>
-								<div class="col-md-6" style="padding: 0px;">
-									TITLE<br />
-									<div class="text-muted">Lorem Ipsum is simply dummy text
-										of the printing and typesetting industry. Lorem Ipsum has been
-										the industry's standard dummy text ever since the 1500s</div>
-								</div>
-								<div class="col-md-2" style="padding: 0px;">
-									<div class="text-center">
-										<h4>&#8377; 720</h4>
+						<c:forEach items="${products}" var="product">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="col-md-2" style="padding: 0px;">
+										<img src="${images}/product/${product.productId}.png" alt="" width="120px" height="120px" />
+									</div>
+									<div class="col-md-6" style="padding: 0px;">
+										${product.name}<br />
+										<div class="text-muted">${product.description}</div>
+									</div>
+									<div class="col-md-2" style="padding: 0px;">
+										<div class="text-center">
+											<h4>&#8377; ${product.price}</h4>
+										</div>
+									</div>
+									<div class="col-md-2 text-right">
+										<button type="submit" class="btn btn-info" id="">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</button>
+										<br> <br>
+										<button type="submit" class="btn btn-warning" id="">
+											<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+										</button>
 									</div>
 								</div>
-								<div class="col-md-2 text-right">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									<br> <br>
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
 							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="col-md-2" style="padding: 0px;">
-									<img src="${images}/1.png" alt="" width="120px" height="120px" />
-								</div>
-								<div class="col-md-6" style="padding: 0px;">
-									TITLE<br />
-									<div class="text-muted">Lorem Ipsum is simply dummy text
-										of the printing and typesetting industry. Lorem Ipsum has been
-										the industry's standard dummy text ever since the 1500s</div>
-								</div>
-								<div class="col-md-2" style="padding: 0px;">
-									<div class="text-center">
-										<h4>&#8377; 720</h4>
-									</div>
-								</div>
-								<div class="col-md-2 text-right">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									<br> <br>
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="col-md-2" style="padding: 0px;">
-									<img src="${images}/1.png" alt="" width="120px" height="120px" />
-								</div>
-								<div class="col-md-6" style="padding: 0px;">
-									TITLE<br />
-									<div class="text-muted">Lorem Ipsum is simply dummy text
-										of the printing and typesetting industry. Lorem Ipsum has been
-										the industry's standard dummy text ever since the 1500s</div>
-								</div>
-								<div class="col-md-2" style="padding: 0px;">
-									<div class="text-center">
-										<h4>&#8377; 720</h4>
-									</div>
-								</div>
-								<div class="col-md-2 text-right">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									<br> <br>
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="col-md-2" style="padding: 0px;">
-									<img src="${images}/1.png" alt="" width="120px" height="120px" />
-								</div>
-								<div class="col-md-6" style="padding: 0px;">
-									TITLE<br />
-									<div class="text-muted">Lorem Ipsum is simply dummy text
-										of the printing and typesetting industry. Lorem Ipsum has been
-										the industry's standard dummy text ever since the 1500s</div>
-								</div>
-								<div class="col-md-2" style="padding: 0px;">
-									<div class="text-center">
-										<h4>&#8377; 720</h4>
-									</div>
-								</div>
-								<div class="col-md-2 text-right">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									<br> <br>
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
+						</c:forEach>
 						<!--End Of list-->
 					</div>
 					<!--End Of list View-->
@@ -198,116 +116,35 @@
 					<!--Grid View-->
 					<div id="grid" class="tab-pane fade">
 
-						<!--Product-->
-						<div class="col-sm-4 col-lg-4 col-md-5">
-							<div class="thumbnail">
-								<img src="${images}/1.png" alt="" />
-								<div class="caption">
-									<h4 class="pull-right">&#8377;150.99</h4>
-									<h4>
-										<a href="#">First Product</a>
-									</h4>
-									<p>
-										See more snippets like this online store item at <a
-											target="_blank" href="">Test - http://test.com</a>.
-									</p>
-								</div>
-								<div class="text-right"
-									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									&nbsp;
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<!--End Of Product-->
-
-						<!--Product-->
-						<div class="col-sm-4 col-lg-4 col-md-5">
-							<div class="thumbnail">
-								<img src="${images}/1.png" alt="" />
-								<div class="caption">
-									<h4 class="pull-right">&#8377;150.99</h4>
-									<h4>
-										<a href="#">First Product</a>
-									</h4>
-									<p>
-										See more snippets like this online store item at <a
-											target="_blank" href="">Test - http://test.com</a>.
-									</p>
-								</div>
-								<div class="text-right"
-									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									&nbsp;
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
+						<c:forEach items="${products}" var="product">
+							<!--Product-->
+							<div class="col-sm-4 col-lg-4 col-md-5">
+								<div class="thumbnail">
+									<img src="${images}/product/${product.productId}.png" alt="" />
+									<div class="caption">
+										<h4 class="pull-right">&#8377; ${product.price}</h4>
+										<h4>
+											<a href="#">${product.name}</a>
+										</h4>
+										<p>
+											${product.description} <a
+												target="_blank" href="">Test - http://test.com</a>.
+										</p>
+									</div>
+									<div class="text-right"
+										style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
+										<button type="submit" class="btn btn-info" id="">
+											<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+										</button>
+										&nbsp;
+										<button type="submit" class="btn btn-warning" id="">
+											<span class="fa fa-shopping-cart" aria-hidden="true"></span>
+										</button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!--End Of Product-->
-
-						<!--Product-->
-						<div class="col-sm-4 col-lg-4 col-md-5">
-							<div class="thumbnail">
-								<img src="${images}/1.png" alt="" />
-								<div class="caption">
-									<h4 class="pull-right">&#8377;150.99</h4>
-									<h4>
-										<a href="#">First Product</a>
-									</h4>
-									<p>
-										See more snippets like this online store item at <a
-											target="_blank" href="">Test - http://test.com</a>.
-									</p>
-								</div>
-								<div class="text-right"
-									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									&nbsp;
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<!--End Of Product-->
-						<!--Product-->
-						<div class="col-sm-4 col-lg-4 col-md-5">
-							<div class="thumbnail">
-								<img src="${images}/1.png" alt="" />
-								<div class="caption">
-									<h4 class="pull-right">&#8377;150.99</h4>
-									<h4>
-										<a href="#">First Product</a>
-									</h4>
-									<p>
-										See more snippets like this online store item at <a
-											target="_blank" href="">Test - http://test.com</a>.
-									</p>
-								</div>
-								<div class="text-right"
-									style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-									<button type="submit" class="btn btn-info" id="">
-										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-									</button>
-									&nbsp;
-									<button type="submit" class="btn btn-warning" id="">
-										<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<!--End Of Product-->
+							<!--End Of Product-->
+						</c:forEach>
 					</div>
 					<!--End Of Grid View-->
 				</div>

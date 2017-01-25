@@ -8,6 +8,7 @@ public interface CategoryDAO {
 	
 	public Category get(int id);
 	public List<Category> list();
+	public Category getCategory(int id);
 	
 	public boolean create(Category category);
 	public boolean delete(Category category);
