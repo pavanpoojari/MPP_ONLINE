@@ -26,7 +26,7 @@
 
 				<sec:authorize access="isAnonymous()">
 
-					<li id="signup"><a href="${contextRoot}/signup"><span
+					<li id="signup"><a href="register"><span
 							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
 					<li id="login"><a href="${contextRoot}/login"><span
@@ -34,19 +34,19 @@
 
 				</sec:authorize>
 
-				<sec:authorize access="hasAuthority('Role_User')">
+				<sec:authorize access="hasAuthority('USER')">
 					<li id="cart"><a href="${contextRoot}/cart"
 						class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
 							class="badge">2</span>
 					</a></li>
 				</sec:authorize>
 
-				<sec:authorize access="hasAuthority('Role_Admin')">
+				<sec:authorize access="hasAuthority('ADMIN')">
 					<li id="admin"><a href="${contextRoot}/admin/AddProduct"><span
 							class="fa fa-id-badge"></span> Admin </a></li>
 				</sec:authorize>
 
-				<sec:authorize access="hasAuthority('Role_User')">
+				<sec:authorize access="hasAuthority('USER')">
 					<li id=""><a href="${contextRoot}/user/userprofile"><span
 							class="fa fa-id-badge"></span> User </a></li>
 				</sec:authorize>
