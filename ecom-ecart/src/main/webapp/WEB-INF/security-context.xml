@@ -3,33 +3,31 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
  						http://www.springframework.org/schema/beans/spring-beans.xsd 
 						http://www.springframework.org/schema/security  
-    					http://www.springframework.org/schema/security/spring-security.xsd"> 
-	
-	
+    					http://www.springframework.org/schema/security/spring-security.xsd">
+
+
 	<http use-expressions="true">
 		<intercept-url pattern="/admin/**" access="hasAuthority('Role_Admin')" />
 		<intercept-url pattern="/user/**" access="hasAuthority('Role_User')" />
 		<intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/**" access="permitAll" />
-		
-		<form-login
-		login-page='/login'
-		default-target-url="/"
-		authentication-failure-url="/login?error=true"/>
-		
-		<logout logout-success-url="/"/>
-		<csrf disabled="true"/>
+
+		<form-login login-page='/login' default-target-url="/"
+			authentication-failure-url="/login?error=true" />
+
+		<logout logout-success-url="/" />
+		<csrf disabled="true" />
 	</http>
-	 
-	
+
+
 	<authentication-manager>
 		<authentication-provider>
-			<user-service>
-				<user name="pavanpoojary" password="1234" authorities="Role_Admin"/>
-				<user name="testtest" password="12345" authorities="Role_User"/>
-			</user-service>
+			<!-- <user-service> <user name="pavanpoojary" password="1234" authorities="Role_Admin"/> 
+				<user name="testtest" password="12345" authorities="Role_User"/> </user-service> -->
 			<!-- For users only -->
-<!-- 			<jdbc-user-service data-source-ref=""/> -->
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="SELECT USERNAME,PASSWORD,ENABLE FROM USER WHERE USERNAME=?"
+				authorities-by-username-query="SELECT USERNAME,ROLE FROM USER WHERE USERNAME=? " />
 		</authentication-provider>
 	</authentication-manager>
 </beans:beans>

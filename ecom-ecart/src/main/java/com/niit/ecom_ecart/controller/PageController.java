@@ -47,7 +47,7 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/signup")
+	/*@RequestMapping(value = "/signup")
 	public ModelAndView signup() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("user", new User());
@@ -66,7 +66,7 @@ public class PageController {
 		}
 		
 		return "redirect:/login";
-	}
+	}*/
 	
 	@RequestMapping(value = "/login")
 	public ModelAndView loign(@RequestParam(value = "login", required = false) String login) {

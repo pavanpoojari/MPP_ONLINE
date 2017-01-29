@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+	<!-- Executed when webFlow is triggered -->
+	<on-start>
+		<evaluate expression="registerFlow.initFlow()" result="flowScope.user" />
+	</on-start>
+
+	<view-state id="start" view="signup" model="flowScope.user">
+		<transition on="submit" to="store" />
+	</view-state>
+	
+	<action-state id="store">
+	<evaluate expression="registerFlow.create(user)"></evaluate>
+	<transition on="success" to="welcome"/>
+	<transition on="failure" to="start"/>
+	</action-state>
+
+	<end-state id="welcome" view="index" />
+	<end-state id="toHome" view="externalRedirect:contextRelative:/" />
+	<end-state id="toException" view="externalRedirect:contextRelative:403" />
+
+	<global-transitions>
+		<transition on="home" to="toHome" />
+		<transition on="error" to="toException" />
+	</global-transitions>
+	
+</flow>
