@@ -77,12 +77,12 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/product/all")
+	@RequestMapping(value = "/product/show/all")
 	public ModelAndView allProducts(	) {
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("product", new Product());
+		/*mv.addObject("product", new Product());*/
 		mv.addObject("title", "Product List");
-		mv.addObject("products", productDAO.list());
+		/*mv.addObject("products", productDAO.list());*/
 		mv.addObject("ifUserClickedProductList", true);
 		return mv;
 	}

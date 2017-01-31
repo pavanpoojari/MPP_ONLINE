@@ -21,7 +21,7 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 
-				<li id="allProduct"><a href="${contextRoot}/product/all"><span
+				<li id="allProduct"><a href="${contextRoot}/product/show/all"><span
 						class=""></span>All Products</a></li>
 
 				<sec:authorize access="isAnonymous()">
@@ -47,7 +47,7 @@
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('USER')">
-					<li id=""><a href="${contextRoot}/user/userprofile"><span
+					<li id="user"><a href="${contextRoot}/user/userprofile"><span
 							class="fa fa-id-badge"></span> User </a></li>
 				</sec:authorize>
 
