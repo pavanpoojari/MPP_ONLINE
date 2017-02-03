@@ -7,7 +7,7 @@
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			Cart&nbsp; <span class="label label-info">2</span>
+			Cart&nbsp; <span class="label label-info">${cart.noofcartitems}</span>
 		</div>
 		<div class="panel-body">
 			<table class="table table-hover">
@@ -21,91 +21,52 @@
 					</tr>
 				</thead>
 				<tbody>
-
-					<tr>
-						<td class="col-md-1">
-							<div class="col-md-3" style="padding: 0px;">
-								<img src="${images}/1.png" alt="" width="120px"
-									height="120px" />
-							</div>
-						</td>
-						<td class="col-md-6">
-							<div class="col-md-12">
-								TITLE<br />
-								<div class="text-muted">Lorem Ipsum is simply dummy text
-									of the printing and typesetting industry. Lorem Ipsum has been
-									the industry's standard dummy text ever since the 1500s</div>
-							</div>
-						</td>
-						<td class="col-md-2">
-							<div class="text-center">&nbsp;&nbsp; &#8377;720
-								&nbsp;&nbsp;</div>
-						</td>
-						<td class="col-md-1">
-							<div class="text-center">&nbsp;&nbsp; &#8377;720
-								&nbsp;&nbsp;</div>
-						</td>
-						<td class="col-md-2">
-							<div class="col-md-4">
-								<button type="button" class="btn btn-info btn-sm"
-									data-toggle="popover" title="Add To Wish List">
-									<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-								</button>
-							</div>
-							<div class="col-md-6">
-								<button type="button" class="btn btn-danger btn-sm"
-									data-toggle="popover" title="Remove">
-									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-								</button>
-							</div>
-						</td>
-					</tr>
-
-					<tr>
-						<td class="col-md-1">
-							<div class="col-md-3" style="padding: 0px;">
-								<img src="${images}/1.png" alt="" width="120px"
-									height="120px" />
-							</div>
-						</td>
-						<td class="col-md-6">
-							<div class="col-md-12">
-								TITLE<br />
-								<div class="text-muted">Lorem Ipsum is simply dummy text
-									of the printing and typesetting industry. Lorem Ipsum has been
-									the industry's standard dummy text ever since the 1500s</div>
-							</div>
-						</td>
-						<td class="col-md-2">
-							<div class="text-center">&nbsp;&nbsp; &#8377;720
-								&nbsp;&nbsp;</div>
-						</td>
-						<td class="col-md-1">
-							<div class="text-center">&nbsp;&nbsp; &#8377;720
-								&nbsp;&nbsp;</div>
-						</td>
-						<td class="col-md-2">
-							<div class="col-md-4">
-								<button type="button" class="btn btn-info btn-sm"
-									data-toggle="popover" title="Add To Wish List">
-									<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-								</button>
-							</div>
-							<div class="col-md-6">
-								<button type="button" class="btn btn-danger btn-sm"
-									data-toggle="popover" title="Remove">
-									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-								</button>
-							</div>
-						</td>
-					</tr>
+				
+					<c:forEach items="${cartItems}" var="cartItem">
+						<tr>
+							<td class="col-md-1">
+								<div class="col-md-3" style="padding: 0px;">
+									<img src="${images}/product/${cartItem.product.productId}.png" alt="" width="120px" height="120px" />
+								</div>
+							</td>
+							<td class="col-md-6">
+								<div class="col-md-12">
+									${cartItem.product.name}<br />
+									<div class="text-muted">${cartItem.product.description}</div>
+								</div>
+							</td>
+							<td class="col-md-2">
+								<div class="text-center">&nbsp;&nbsp; &#8377; ${cartItem.price}
+									&nbsp;&nbsp;</div>
+							</td>
+							<td class="col-md-1">
+								<div class="text-center">&nbsp;&nbsp; &#8377; ${cartItem.price}
+									&nbsp;&nbsp;</div>
+							</td>
+							<td class="col-md-2">
+								<div class="col-md-4">
+									<button type="button" class="btn btn-info btn-sm"
+										data-toggle="popover" title="Add To Wish List">
+										<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+									</button>
+								</div>
+								<div class="col-md-6">
+									<button type="button" class="btn btn-danger btn-sm"
+										data-toggle="popover" title="Remove">
+										<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+									</button>
+								</div>
+							</td>
+						</tr>
+					</c:forEach>
+					
 				</tbody>
 			</table>
 		</div>
 
 		<div class="panel-footer">
 			<b style="padding-left: 19.4cm;">ORDER TOTAL
-				:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#8377; 1440</b>
+				:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#8377; ${cartItem.total}</b>
 		</div>
 	</div>
 </div>
@@ -132,8 +93,7 @@
 	<div class="row">
 
 		<div class="col-sm-2 col-md-2">
-			<img src="${images}/1.png" alt="..." width="140px"
-				height="140px">
+			<img src="${images}/1.png" alt="..." width="140px" height="140px">
 		</div>
 		<div class="col-sm-2 col-md-2 caption" style="padding: 0px;">
 			24/7 Free Support<br />
@@ -142,8 +102,7 @@
 		</div>
 
 		<div class="col-sm-2 col-md-2">
-			<img src="${images}/1.png" alt="..." width="140px"
-				height="140px">
+			<img src="${images}/1.png" alt="..." width="140px" height="140px">
 		</div>
 		<div class="col-sm-2 col-md-2 caption" style="padding: 0px;">
 			Stock Photos Included<br />
@@ -152,8 +111,7 @@
 		</div>
 
 		<div class="col-sm-2 col-md-2">
-			<img src="${images}/1.png" alt="..." width="140px"
-				height="140px">
+			<img src="${images}/1.png" alt="..." width="140px" height="140px">
 		</div>
 		<div class="col-sm-2 col-md-2 caption" style="padding: 0px;">
 			Satisfaction Guarantee<br />

@@ -71,9 +71,7 @@
 		<%@include file="productList.jsp"%>
 	</c:if>
 
-	<!-- To Load Admin Page -->
-	
-
+	<!-- To Load Admin Pages -->
 	<c:if test="${ifAdminClickedAddProduct == true}">
 		<%@include file="./admin/adminpanels.jsp"%>
 	</c:if>
@@ -95,10 +93,27 @@
 		<%@include file="./admin/adminpanels.jsp"%>
 	</c:if>
 
+	<!-- To Load User Pages -->
 	<c:if test="${ifUserClickedProfile == true}">
 		<%@include file="./user/userpanels.jsp"%>
 	</c:if>
 
+	<c:if test="${ifUserClickedpurchaseHistory == true}">
+		<%@include file="./user/userpanels.jsp"%>
+	</c:if>
+
+	<c:if test="${ifUserClickedbillingHistory == true}">
+		<%@include file="./user/userpanels.jsp"%>
+	</c:if>
+
+	<c:if test="${ifUserClickedmyWishlist == true}">
+		<%@include file="./user/userpanels.jsp"%>
+	</c:if>
+	
+	<c:if test="${ifUserClickedUpdateProfile == true}">
+		<%@include file="./user/userpanels.jsp"%>
+	</c:if>
+	
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
 	<!-- End Of Footer -->
