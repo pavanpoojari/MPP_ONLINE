@@ -1,10 +1,17 @@
 package com.niit.ecom_ecart.controller;
 
 import java.security.Principal;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.backend.DAO.CartDAO;
@@ -52,5 +59,54 @@ public class CartController {
 		mv.addObject("ifUserClickedCart", true);
 		return mv;
 	}
-	
+
+	@RequestMapping(value = { "/cart/add/{id}" })
+	public String addCart(@PathVariable(name = "id") int id, Principal principal) {
+		user = userDAO.getByuserName(principal.getName());
+		product = productDAO.get(id);
+		Set<CartItem> cartItems = new HashSet<>();
+		cart = user.getCart();
+
+		boolean flag = cartItemDAO.existingCartItem(product.getProductId(), cart.getCartId());
+
+		if (flag != true) {
+			cartItem.setProduct(product);
+			cartItem.setPrice(product.getPrice());
+			cartItem.setTotal(cartItem.getTotal());
+			cartItems.add(cartItem);
+			cart.setCartItems(cartItems);
+			cart.setUser(user);
+			cartItem.setCart(cart);
+			productDAO.saveOrUpdate(product);
+			cartItemDAO.create(cartItem);
+			cartDAO.saveOrUpdateAgain(cart);
+			cartDAO.saveOrUpdate(cart);
+			return "redirect:/user/cart?op=add&status=success";
+		} else {
+
+			return "redirect:/user/cart?op=add&status=failure";
+		}
+	}
+
+	@RequestMapping(value = { "/cart/delete/{id}" })
+	public String deleteCart(@PathVariable(name = "id", required = false) int id, Principal principal) {
+		user = userDAO.getByuserName(principal.getName());
+		cartItem = cartItemDAO.get(id);
+		product = productDAO.get(cartItem.getProduct().getProductId());
+		if (id != 0) {
+			cart = cartDAO.get(user.getCart().getCartId());
+			cartItemDAO.delete(cartItem);
+			cartDAO.saveOrUpdateAgain(cart);
+			cartDAO.saveOrUpdate(cart);
+			return "redirect:/user/cart?op=delete&status=success";
+		} else {
+			return "redirect:/user/cart?op=delete&status=failure";
+		}
+	}
+
+	/*
+	 * @RequestMapping(value = { "/cart/update" }, method = RequestMethod.POST)
+	 * public String updateCart(@ModelAttribute CartItem cartItem,
+	 * HttpServletRequest request){ return null; }
+	 */
 }

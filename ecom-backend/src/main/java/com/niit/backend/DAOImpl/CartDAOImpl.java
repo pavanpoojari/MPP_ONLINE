@@ -36,9 +36,7 @@ public class CartDAOImpl implements CartDAO {
 	
 	@Override
 	@Transactional
-	public Cart get(int userId) {
-		user = userDAO.get(userId);
-		int cartId = user.getCart().getCartId();
+	public Cart get(int cartId) {
 		return (Cart) sessionFactory.getCurrentSession().get(Cart.class, cartId);
 	}
 

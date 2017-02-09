@@ -36,6 +36,10 @@ public class UserDAOImpl implements UserDAO {
 	public boolean create(User user) {
 		
 		try {
+			
+			user.setRole("USER");
+			user.setEnable(true);
+			
 			sessionFactory.getCurrentSession().save(user);
 			return true;
 		} catch (HibernateException e) {
@@ -68,6 +72,26 @@ public class UserDAOImpl implements UserDAO {
 			return false;
 		}
 		
+	}
+
+	@Override
+	public boolean isValidate(String userName, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	@Transactional
+	public User getByuserName(String userName) {
+		
+		String hql = "FROM USER WHERE USERNAME = :uname";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setParameter("uname", userName);
+		List<User> listUser = query.getResultList();
+		if(listUser != null && !listUser.isEmpty()){
+			return listUser.get(0);
+		}
+		return null;
 	}
 
 }

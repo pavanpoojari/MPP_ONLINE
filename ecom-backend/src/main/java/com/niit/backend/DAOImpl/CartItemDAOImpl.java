@@ -22,7 +22,7 @@ public class CartItemDAOImpl implements CartItemDAO {
 	@Transactional
 	public List<CartItem> list(int cartId) {
 	
-		String hql = "FROM CART_ITEM WHERE CART_ID = : cartId";
+		String hql = "FROM CART_ITEM WHERE CART_ID = :cartId";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("cartId", cartId);
 		return query.list();
@@ -38,8 +38,7 @@ public class CartItemDAOImpl implements CartItemDAO {
 	@Override
 	@Transactional
 	public CartItem getByProductId(int productId, int cartId) {
-		
-		String hql = "FROM CART_ITEM WHERE PRODUCT_ID = :productId AND CART_ID = : cartId";
+		String hql = "FROM CART_ITEM WHERE PRODUCT_ID = :productId AND CART_ID = :cartId";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("productId", productId);
 		query.setParameter("cartId", cartId);
@@ -55,7 +54,7 @@ public class CartItemDAOImpl implements CartItemDAO {
 	@Transactional
 	public boolean existingCartItem(int productId, int cartId) {
 		
-		String hql = "FROM CART_ITEM WHERE CART_ID = : cartId AND PRODUCT_ID = :productId";
+		String hql = "FROM CART_ITEM WHERE CART_ID = :cartId AND PRODUCT_ID = :productId";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setParameter("cartId", cartId);
 		query.setParameter("productId", productId);

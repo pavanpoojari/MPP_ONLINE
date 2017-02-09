@@ -14,7 +14,7 @@
 					<div class="panel-heading">
 						<div class="input-group">
 							<input type="text" class="form-control"
-								placeholder="Search by name ...." ng-model="searchT.name">
+								placeholder="Search by name ...." ng-model="searchTab.name">
 							<span class="input-group-btn">
 								<button class="btn btn-primary" type="button">
 									<span class="glyphicon glyphicon-search"></span>
@@ -87,7 +87,7 @@
 						<div id="list" class="tab-pane fade in active">
 							<!--List-->
 
-							<div ng-repeat="product in products | filter:searchT">
+							<div ng-repeat="product in products | filter:searchTab">
 								<%-- <c:forEach items="${products}" var="product"> --%>
 								<div class="panel panel-default">
 									<div class="panel-body">
@@ -96,7 +96,7 @@
 												alt="" width="120px" height="120px" />
 										</div>
 										<div class="col-md-6" style="padding: 0px;">
-											<a ng-href="">{{product.name}}</a><br />
+											<a ng-href="${contextRoot}/product/{{product.productId}}">{{product.name}}</a><br />
 											<div class="text-muted">{{product.description}}</div>
 										</div>
 										<div class="col-md-2" style="padding: 0px;">
@@ -105,13 +105,11 @@
 											</div>
 										</div>
 										<div class="col-md-2 text-right">
-											<button type="submit" class="btn btn-info" id="">
-												<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-											</button>
-											<br> <br>
-											<button type="submit" class="btn btn-warning" id="">
-												<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-											</button>
+											&nbsp;<a class="btn btn-info" id=""> <span
+												class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+											</a> <br> <br> <a class="btn btn-warning" id=""> <span
+												class="fa fa-shopping-cart" aria-hidden="true"></span>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -124,7 +122,7 @@
 						<!--Grid View-->
 						<div id="grid" class="tab-pane fade">
 
-							<div ng-repeat="product in products | filter:searchT">
+							<div ng-repeat="product in products | filter:searchTab">
 								<%-- <c:forEach items="${products}" var="product"> --%>
 								<!--Product-->
 								<div class="col-sm-4 col-lg-4 col-md-5">
@@ -134,12 +132,9 @@
 										<div class="caption">
 											<h4 class="pull-right">&#8377; {{product.price}}</h4>
 											<h4>
-												<a href="#">{{product.name}}</a>
+												<a ng-href="${contextRoot}/product/{{product.productId}}">{{product.name}}</a>
 											</h4>
-											<p>
-												{{product.description}} <a target="" href="">Test
-													- http://test.com</a>.
-											</p>
+											<p>{{product.description}} .</p>
 										</div>
 										<div class="text-right"
 											style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
