@@ -178,3 +178,37 @@ a {
     width: 155px;
     border-radius: 1px;
 }
+
+.B8size{
+        padding: 15px 175px 15px 175px;
+        border-radius: 2px;
+}
+.panel-table .panel-body{
+  padding:0;
+}
+
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
+}
+
+.clickable{
+		    cursor: pointer;   
+		}
+.display{
+			display: none;
+		}
+
+.img-size{
+  width: 110px;
+  height: 80px;
+  
+}
+.view {
+    width: 100%;
+}
+.pad{
+	padding:0px;
+	border: 0px solid transparent; 
+}
+/*Model menu*/

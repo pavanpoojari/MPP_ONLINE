@@ -92,13 +92,12 @@ public class AdminController {
 	}
 	
 	@RequestMapping(value = { "/edit/product/{id}" }, method = RequestMethod.GET)
-	public ModelAndView updateProduct(@ModelAttribute Product product) {
+	public ModelAndView updateProduct(@ModelAttribute Product product, @PathVariable(name = "id", required = false) int id) {
 		ModelAndView mv = new ModelAndView("page");
-		product = productDAO.get(product.getProductId());
+		product = productDAO.get(id);
 		mv.addObject("product", product);
 		mv.addObject("title", "Update Product");
 		mv.addObject("categories", categoryDAO.list());
-		mv.addObject("products", productDAO.list());
 		mv.addObject("developers", developerDAO.list());
 		mv.addObject("ifAdminClickedUpdateProduct", true);
 		return mv;
