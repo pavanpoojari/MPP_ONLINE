@@ -20,7 +20,7 @@
 	<transition on="failure" to="start"/>
 	</action-state>
 
-	<end-state id="welcome" view="index" />
+	<end-state id="welcome" view="welcome" />
 	<end-state id="toHome" view="externalRedirect:contextRelative:/" />
 	<end-state id="toException" view="externalRedirect:contextRelative:403" />
 

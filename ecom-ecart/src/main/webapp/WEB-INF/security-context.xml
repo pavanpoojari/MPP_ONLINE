@@ -7,8 +7,8 @@
 
 
 	<http use-expressions="true">
-		<intercept-url pattern="/admin/**" access="hasAuthority('Role_Admin')" />
-		<intercept-url pattern="/user/**" access="hasAuthority('Role_User')" />
+		<intercept-url pattern="/admin/**" access="hasAuthority('ADMIN')" />
+		<intercept-url pattern="/user/**" access="hasAuthority('USER')" />
 		<intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/**" access="permitAll" />
 
