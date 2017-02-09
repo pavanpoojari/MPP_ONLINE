@@ -1,5 +1,4 @@
 $(function() {
-
 	switch (hoverMenu) {
 	case 'Product List':
 		$('#allProduct').addClass('active');
@@ -35,7 +34,27 @@ $(function() {
 		$('#addProduct').addClass('active');
 		break;
 		/*End Of Admin Panels Active Tab */
-
+		
+		/* User Panels Active Tab */
+	case 'User':
+		$('#user').addClass('active');
+		break;
+		
+	case 'User Profile':
+		$('#userProfile').addClass('active');
+		break;
+	case 'Purchased Histroy':
+		$('#userHistory').addClass('active');
+		break;
+	case 'Billing Histroy':
+		$('#userBill').addClass('active');
+		break;
+	case 'My Wishlist':
+		$('#userWishlist').addClass('active');
+		break;
+		/*End Of User Panels Active Tab */
+		
+		
 	default:
 		$('#index').addClass('active');
 		break;

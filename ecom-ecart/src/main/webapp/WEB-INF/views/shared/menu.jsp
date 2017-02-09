@@ -35,9 +35,9 @@
 				</sec:authorize>
 
 				<sec:authorize access="hasAuthority('USER')">
-					<li id="cart"><a href="${contextRoot}/cart"
+					<li id="cart"><a href="${contextRoot}/user/cart"
 						class="fa fa-shopping-cart">&nbsp;&nbsp;Cart <span
-							class="badge">2</span>
+							class="badge">${noofcartitems}</span>
 					</a></li>
 				</sec:authorize>
 

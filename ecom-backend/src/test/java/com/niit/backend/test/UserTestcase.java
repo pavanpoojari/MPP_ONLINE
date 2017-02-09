@@ -14,10 +14,10 @@ public class UserTestcase {
 	AnnotationConfigApplicationContext context;
 
 	@Autowired
-	UserDAO userDAO;
+	static UserDAO userDAO;
 
 	@Autowired
-	User user;
+	static User user;
 
 	// Annotation
 	public UserTestcase() {
@@ -42,7 +42,7 @@ public class UserTestcase {
 	// Delete UserTable
 	@Test
 	public void deleteUserTestCase() {
-		user.setId(35);
+		user.setUserId(35);
 		Assert.assertEquals("Delete Product test case", true, userDAO.delete(user));
 	}
 
