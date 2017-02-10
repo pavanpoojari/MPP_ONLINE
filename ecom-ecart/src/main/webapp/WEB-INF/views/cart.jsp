@@ -57,10 +57,10 @@
 											</button>
 										</div>
 										<div class="col-md-6">
-											<button type="button" class="btn btn-danger btn-sm"
-												data-toggle="popover" title="Remove">
+											<a type="button" class="btn btn-danger btn-sm"
+												data-toggle="popover" title="Remove" href="${contextRoot}/user/cart/delete/${cartItem.id}">
 												<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-											</button>
+											</a>
 										</div>
 									</td>
 								</tr>

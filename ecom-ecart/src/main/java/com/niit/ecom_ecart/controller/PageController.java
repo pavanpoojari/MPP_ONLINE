@@ -103,7 +103,6 @@ public class PageController {
 		mv.addObject("title", "Product");
 		mv.addObject("product", productDAO.get(id));
 		mv.addObject("ifUserClickedProduct", true);
-
 		return mv;
 	}
 

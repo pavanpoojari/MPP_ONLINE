@@ -105,9 +105,10 @@
 											</div>
 										</div>
 										<div class="col-md-2 text-right">
-											&nbsp;<a class="btn btn-info" id=""> <span
+											&nbsp;<a class="btn btn-info" href="#"> <span
 												class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-											</a> <br> <br> <a class="btn btn-warning" id=""> <span
+											</a> <br> <br> <a class="btn btn-warning"
+												href="${contextRoot}/user/cart/add/{{product.productId}}"> <span
 												class="fa fa-shopping-cart" aria-hidden="true"></span>
 											</a>
 										</div>

@@ -2,16 +2,15 @@ package com.niit.ecom_ecart.controller;
 
 import java.security.Principal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.backend.DAO.CartDAO;
@@ -46,15 +45,21 @@ public class CartController {
 	private CartItemDAO cartItemDAO;
 	@Autowired
 	private CartItem cartItem;
+	
+	@Autowired
+	HttpSession httpSession;
 
 	@RequestMapping(value = "/cart")
 	public ModelAndView cart(Principal principal) {
 		ModelAndView mv = new ModelAndView("page");
 		user = userDAO.getByuserName(principal.getName());
 		mv.addObject("cartItem", new CartItem());
+		
+		List<CartItem> ci = cartItemDAO.list(cart.getCartId());
+		httpSession.setAttribute("noofcartItems", ci.size());
+		
 		mv.addObject("cartItems", cartItemDAO.list(user.getCart().getCartId()));
 		mv.addObject("cart", cartDAO.get(user.getCart().getCartId()));
-
 		mv.addObject("title", "Cart");
 		mv.addObject("ifUserClickedCart", true);
 		return mv;
