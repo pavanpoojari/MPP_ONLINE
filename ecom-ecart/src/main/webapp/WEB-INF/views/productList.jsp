@@ -11,8 +11,10 @@
 			<div class="col-md-12">
 				<!--Search-->
 				<div class="panel panel-default">
-					<div class="panel-heading">
-						<div class="input-group">
+					<div class="panel-heading sha">
+						<input type="text" class="form-control"
+							placeholder="Search by name ...." ng-model="searchTab.name">
+						<!-- <div class="input-group">
 							<input type="text" class="form-control"
 								placeholder="Search by name ...." ng-model="searchTab.name">
 							<span class="input-group-btn">
@@ -20,7 +22,7 @@
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
 							</span>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<!--End Of Search-->
@@ -50,16 +52,19 @@
 									<option value="Medical">Medical(Healthcare)</option>
 								</select>
 							</div>
+							<div>
+								<hr class="smalls">
+							</div>
 							<div class="form-group">
-								<label for="subject">By Price</label> <select id="subject"
-									name="subject" class="form-control" required="required">
-									<option value="na" selected="">Choose One:</option>
-									<option value="0-1000">0 - 1000</option>
-									<option value="1000-2000">1000 - 2000</option>
-									<option value="2000-3000">2000 - 3000</option>
-									<option value="3000-4000">3000 - 4000</option>
-									<option value="4000-5000">4000 - 5000</option>
-								</select>
+								<label for="price">By Price</label>
+								<ul
+									class="nav nav-pills nav-stacked rad nav-pills-stacked-example">
+									<li><a href="#" class="">Low to High</a></li>
+									<li><a href="#" class="">High to Low</a></li>
+								</ul>
+							</div>
+							<div>
+								<hr class="smalls">
 							</div>
 							<!--End Of Drop-Down-->
 						</div>
@@ -104,14 +109,26 @@
 												<h4>&#8377; {{product.price}}</h4>
 											</div>
 										</div>
-										<div class="col-md-2 text-right">
+										<div class="col-md-2 text-center">
+											<div class="col-md-12">
+												<a type="submit" class="btn btn-info" href="#"><span
+													class="fa fa-heart" aria-hidden="true"></span></a>
+											</div>
+											<div class="col-md-12">
+												<br> <a type="submit" class="btn btn-warning"
+													href="${contextRoot}/user/cart/add/{{product.productId}}"><span
+													class="fa fa-cart-plus" aria-hidden="true"></span></a>
+											</div>
+										</div>
+
+										<%-- <div class="col-md-2 text-right">
 											&nbsp;<a class="btn btn-info" href="#"> <span
 												class="glyphicon glyphicon-heart" aria-hidden="true"></span>
 											</a> <br> <br> <a class="btn btn-warning"
-												href="${contextRoot}/user/cart/add/{{product.productId}}"> <span
-												class="fa fa-shopping-cart" aria-hidden="true"></span>
+												href="${contextRoot}/user/cart/add/{{product.productId}}">
+												<span class="fa fa-shopping-cart" aria-hidden="true"></span>
 											</a>
-										</div>
+										</div> --%>
 									</div>
 								</div>
 								<%-- </c:forEach> --%>
@@ -139,13 +156,12 @@
 										</div>
 										<div class="text-right"
 											style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-											<button type="submit" class="btn btn-info" id="">
-												<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-											</button>
-											&nbsp;
-											<button type="submit" class="btn btn-warning" id="">
-												<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-											</button>
+											<a type="submit" class="btn btn-info" href="#"> <span
+												class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+											</a> &nbsp; <a type="submit" class="btn btn-warning"
+												href="${contextRoot}/user/cart/add/{{product.productId}}">
+												<span class="fa fa-cart-plus" aria-hidden="true"></span>
+											</a>
 										</div>
 									</div>
 								</div>

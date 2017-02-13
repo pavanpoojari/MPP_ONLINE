@@ -12,9 +12,9 @@
 		</div>
 		<div class="col-md-8">
 			<div class="well">
-				<form:form method="POST" action="${contextRoot}/admin/saveProduct"
-					class="form" role="form" modelAttribute="product"
-					enctype="multipart/form-data">
+				<form:form id="productForm" method="POST"
+					action="${contextRoot}/admin/saveProduct" class="form" role="form"
+					modelAttribute="product" enctype="multipart/form-data">
 					<div class="row">
 
 						<div class="col-md-1"></div>
@@ -22,20 +22,20 @@
 						<div class="col-md-10">
 
 							<div class="form-group">
-								<label for="username"> Product Name </label>
+								<label for="name"> Product Name </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span
 										class="fa fa-shopping-cart"></span> </span>
-									<form:input type="text" path="name" class="form-control"
-										placeholder="Enter Product Name" required="required"
-										value="${product.name}"></form:input>
+									<form:input type="text" path="name" id="name" name="name"
+										class="form-control" placeholder="Enter Product Name"
+										required="required" value="${product.name}"></form:input>
 								</div>
 								<form:hidden path="productId" class="form-control"
 									placeholder="Enter Product Id" value="${product.productId}" />
 							</div>
 
 							<div class="form-group">
-								<label for="username"> Choose a Category </label>
+								<label for="category"> Choose a Category </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span
 										class="fa fa-shopping-cart"></span> </span>
@@ -48,7 +48,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="username"> Choose a Developer </label>
+								<label for="developer"> Choose a Developer </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span class="fa fa-code"></span>
 									</span>
@@ -61,31 +61,32 @@
 							</div>
 
 							<div class="form-group">
-								<label for="username"> Set a Price </label>
+								<label for="price"> Set a Price </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span class="fa fa-inr"></span>
 									</span>
-									<form:input type="text" class="form-control" path="price"
-										placeholder="Enter a Price" required="required"
-										value="${product.price}" />
+									<form:input type="number" class="form-control" path="price"
+										id="price" name="price" placeholder="Enter a Price"
+										required="required" value="${product.price}" />
 								</div>
 							</div>
 
 
 							<div class="form-group">
-								<label for="username"> Add a Product Description </label>
+								<label for="description"> Add a Product Description </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span class="fa fa-info"></span>
 									</span>
 									<form:textarea path="description" rows="3" cols="25"
-										class="form-control" placeholder="Enter Description"
-										value="${product.description}" />
+										id="description" name="description" class="form-control"
+										placeholder="Enter Description" value="${product.description}" />
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="InputFile">Add a Cover Photo</label>
-								<form:input path="image" type="file" id="uploadFile" />
+								<label for="image">Add a Cover Photo</label>
+								<form:input path="image" type="file" id="image" class="form-control"
+									name="image" />
 							</div>
 
 							<!-- <div class="form-group">
@@ -163,7 +164,8 @@
 							<c:forEach items="${products}" var="product">
 								<tr>
 									<td class="hidden-xs hidden-md hidden-lg">${product.productId}</td>
-									<td><img class="well img-responsive img-center pad img-size img-rounded"
+									<td><img
+										class="well img-responsive img-center pad1 img-size img-rounded"
 										src="${images}/product/${product.productId}.png"
 										height="120px" width="120px" /></td>
 									<td>${product.name}</td>
@@ -171,12 +173,13 @@
 									<td>${product.description}</td>
 									<td></td>
 									<td>&#8377; ${product.price}</td>
-									<td class="text-center"><a
+									<td class="text-center"><br> <a
 										href="${contextRoot}/admin/edit/product/${product.productId}"
-										class="btn btn-default btn-sm"><span class="fa fa-pencil"></span></a>&nbsp;
-										<a
+										class="btn btn-default btn-sm btn-rad"><span
+											class="fa fa-pencil"></span></a>&nbsp; <a
 										href="${contextRoot}/admin/delete/product/${product.productId}"
-										class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></a></td>
+										class="btn btn-danger btn-sm btn-rad"><span
+											class="fa fa-trash"></span></a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

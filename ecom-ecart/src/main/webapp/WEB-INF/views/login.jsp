@@ -20,12 +20,12 @@
 							<div class="col-md-1"></div>
 							<div class="col-md-10">
 								<div class="form-group">
-									<label for="email"> Email Address</label>
+									<label for="username"> User Name</label>
 									<div class="input-group">
 										<span class="input-group-addon"><span
-											class="glyphicon glyphicon-envelope"></span> </span> 
-											<input type="text" class="form-control" id="username" name="username"
-											placeholder="Enter email" required="required" />
+											class="glyphicon glyphicon-envelope"></span> </span> <input
+											type="text" class="form-control" id="username"
+											name="username" placeholder="Enter User Name" required="required" />
 									</div>
 								</div>
 								<div class="form-group">
@@ -33,16 +33,27 @@
 									<div class="input-group">
 										<span class="input-group-addon"><span
 											class="glyphicon glyphicon-lock"></span> </span> <input
-											type="password" class="form-control" id="password" name="password"
-											placeholder="Enter password" required="required" />
+											type="password" class="form-control" id="password"
+											name="password" placeholder="Enter password" required="required"/>
 									</div>
 								</div>
 							</div>
 
-							<div class="form-group col-md-12 text-center">
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<button type="submit"
+									class="col-md-12 col-sm-12 col-xs-12 btn btn-primary pad">
+									Login</button>
+								&nbsp;
+								<div class="col-md-12">
+									<h4>
+										<a href="register">Sign Up</a>
+									</h4>
+								</div>
+							</div>
+							<!-- <div class="form-group col-md-12 text-center">
 								<button id="B2size" type="submit" class="btn btn-primary"
 									id="btnLogin">Login</button>
-							</div>
+							</div> -->
 						</div>
 					</form:form>
 				</div>

@@ -10,7 +10,13 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a href="${contextRoot}/" class="navbar-brand"># WEBTEMP #</a>
+			<%-- <a href="${contextRoot}/" class="navbar-brand"># WEBTEMP #</a> --%>
+			<a href="${contextRoot}/" class="navbar-brand" style="padding: 5px">
+				<div class="the-icons">
+					<i class="demo-icon icon-logo">&#xe800;</i>
+				</div>
+			</a>
+
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<ul class="nav navbar-nav ">

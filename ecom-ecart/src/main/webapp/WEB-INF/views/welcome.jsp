@@ -6,6 +6,8 @@
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
 <s:url value="/resources/images" var="images" />
+<s:url value="/resources/fonts" var="fonts" />
+
 <c:set value="${pageContext.request.contextPath}" var="contextRoot" />
 
 <!DOCTYPE html>
@@ -13,6 +15,8 @@
 <head>
 <meta name="description" content="WEBTEMP">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="${images}/LOGO.ico">
+
 <title>WebTemp - ${title}</title>
 
 <script src="${js}/jquery.min.js"></script>
@@ -22,6 +26,8 @@
 <link rel="stylesheet" href="${css}/bootstrap-flatly.css">
 <link rel="stylesheet" href="${css}/lstyle.css">
 <link rel="stylesheet" href="${css}/font-awesome.css">
+<link rel="stylesheet" href="${css}/animation.css">
+<link rel="stylesheet" href="${css}/icon.css">
 
 <!-- Menu bar active -->
 <script type="text/javascript">
@@ -47,5 +53,10 @@
 	<!-- Footer -->
 	<%@include file="./shared/footer.jsp"%>
 	<!-- End Of Footer -->
+
+	<script src="${js}/jquery.min.js"></script>
+	<script src="${js}/bootstrap.min.js"></script>
+	<script src="${js}/lstyle.js"></script>
+	<script src="${js}/formScript.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-    	body{
+ body{
     padding-top: 40px;
     padding-bottom: 55px;
   }
@@ -118,7 +118,7 @@
   }
   #Bsize{
     height:50px;
-    width: 160px;
+    width: 200px;
     /*border-radius: 0px;*/
   }
 
@@ -207,8 +207,61 @@ a {
 .view {
     width: 100%;
 }
-.pad{
+.pad1{
 	padding:0px;
 	border: 0px solid transparent; 
 }
 /*Model menu*/
+.foo{
+ font-size: 40px;
+}
+.pad{
+  padding: 12px;
+}
+.html5{
+  padding: 0px;
+  width: 78%;
+  height: 78%;
+}
+.css3{
+  width: 72%;
+  height: 72%;
+}
+.boots{
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+.angu{
+  padding: 0px;
+  width: 70%;
+  height: 70%;
+}
+hr.smalls {
+    padding: 0px;
+    max-width: 90%;
+    box-shadow: 1px 1px #E4E4E4;
+}
+
+.rad>li>a{
+  border-radius: 2px;
+}
+
+.sha{
+  box-shadow: 1px 1px 1px 1px #E4E4E4;
+}
+#loginForm .input-group .form-control-feedback {
+    top: 0;
+    right: -15px;
+}
+
+.pad4{
+  padding:4px; 
+}
+
+.trad{
+  border-radius: 4px 0px;
+}
+.btn-rad{
+  border-radius:40px;
+}

@@ -1,6 +1,5 @@
 <!-- Contain -->
 <div class="container">
-	<hr>
 	<h1 class="text-center">
 		Contact Us<small>&nbsp;Feel free to contact us</small>
 	</h1>
@@ -44,7 +43,8 @@
 								</div>
 							</div>
 							<div class="col-md-12 text-center">
-								<button id="B1size" type="submit" class="btn btn-primary"
+								<button type="submit"
+									class="col-md-12 col-sm-12 col-xs-12 btn btn-primary"
 									id="btnContactUs">Send Message</button>
 							</div>
 						</div>
@@ -58,16 +58,52 @@
 							<span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Address
 						</legend>
 						<address>
-							<strong>WebTemp, Inc.</strong><br> xyz, xyz,<br> xyz,
-							xyz.<br> <abbr title="Phone"> Contact No :</abbr> (123) 456-7890
+							<hr class="smalls">
+							<strong>WebTemp, Inc.</strong><br> xyz, xyz<br> xyz,
+							xyz<br> xyz, xyz<br> <abbr title="Phone"> P:</abbr>
+							(123) 456-7890
 						</address>
 						<address>
+							<hr class="smalls">
 							<strong>Pavan Poojary</strong><br> <a href="mailto:#">pavan.poojary@webtemp.com</a>
 						</address>
 					</form>
 				</div>
 			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="well" style="padding: 0px">
+							<div id="map" style="width: 100%; height: 420px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+	// code for google map api
+	function initialize() {
+		var mapCanvas = document.getElementById('map');
+		var myLatLng = new google.maps.LatLng(19.165028, 72.994819);
+		var mapOptions = {
+			center : myLatLng,
+			zoom : 17,
+			mapTypeId : google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas, mapOptions)
+
+		var marker = new google.maps.Marker({
+			position : myLatLng,
+			title : "Web Temp"
+		});
+		marker.setMap(map);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 <!-- End Of Contain -->

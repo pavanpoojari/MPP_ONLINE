@@ -13,19 +13,21 @@
 
 		<div class="col-md-8">
 			<div class="well">
-				<form:form method="POST" action="${contextRoot}/admin/saveCategory"
-					class="form" role="form" modelAttribute="category">
+				<form:form id="categoryForm" method="POST"
+					action="${contextRoot}/admin/saveCategory" class="form" role="form"
+					modelAttribute="category">
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-10">
 
 							<div class="form-group">
-								<label for="username"> Category Name </label>
+								<label for="name"> Category Name </label>
 								<div class="input-group">
 									<span class="input-group-addon"><span
 										class="fa fa-shopping-cart"></span> </span>
-									<form:input path="name" class="form-control"
-										placeholder="Enter Category Name" value="${category.name}"></form:input>
+									<form:input path="name" id="name" name="name"
+										class="form-control" placeholder="Enter Category Name"
+										value="${category.name}"></form:input>
 								</div>
 								<form:hidden path="id" class="form-control"
 									placeholder="Category Id" value="${category.id}" />
@@ -37,7 +39,8 @@
 									<span class="input-group-addon"><span class="fa fa-info"></span>
 									</span>
 									<form:textarea path="description" rows="5" cols="25"
-										class="form-control" placeholder="Enter Description"
+										id="description" name="description" class="form-control"
+										placeholder="Enter Description"
 										value="${category.description}"></form:textarea>
 								</div>
 							</div>
@@ -96,7 +99,7 @@
 
 						<thead>
 							<tr>
-								<th class="hidden-xs">ID</th>
+								<th class="hidden-xs hidden-md hidden-lg">ID</th>
 								<th>Category Name</th>
 								<th>Category Description</th>
 								<th class="text-center"><span class="fa fa-cog"></span>
@@ -107,14 +110,16 @@
 						<tbody>
 							<c:forEach items="${categories}" var="category">
 								<tr>
-									<th class="hidden-xs">${category.id}</th>
+									<th class="hidden-xs hidden-md hidden-lg">${category.id}</th>
 									<th>${category.name}</th>
 									<th>${category.description}</th>
-									<td class="text-center"><a
+									<td class="text-center"> <a
 										href="${contextRoot}/admin/edit/category/${category.id}"
-										class="btn btn-default btn-sm"><span class="fa fa-pencil"></span></a>&nbsp;
-										<a href="${contextRoot}/admin/delete/category/${category.id}"
-										class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></a></td>
+										class="btn btn-default btn-sm btn-rad"><span
+											class="fa fa-pencil"></span></a>&nbsp; <a
+										href="${contextRoot}/admin/delete/category/${category.id}"
+										class="btn btn-danger btn-sm btn-rad"><span
+											class="fa fa-trash"></span></a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
