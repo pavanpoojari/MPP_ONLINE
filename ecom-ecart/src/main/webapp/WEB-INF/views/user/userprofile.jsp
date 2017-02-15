@@ -16,10 +16,10 @@
 
 							<div class="form-group">
 								<h4>
-									<label for="username"> Pavan Poojary </label>
+									<label for="username">${user.firstname} ${user.lastname}</label>
 								</h4>
 								<label for="id"> User Email ID &nbsp;&nbsp; :
-									&nbsp;&nbsp;</label><b> pavanpoojary@gmail.com</b><br> <label
+									&nbsp;&nbsp;</label><b>${user.emailid}</b><br> <label
 									for="id"> Password
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									: &nbsp;&nbsp;</label><b> <a href="#">Change Password</a></b>
@@ -54,11 +54,11 @@
 							<table>
 								<tr>
 									<th><label for="id"> Name </label></th>
-									<th>:&nbsp;<label for="id"> Pavan Poojary </label></th>
+									<th>:&nbsp;<label for="id"> ${user.firstname} ${user.lastname} </label></th>
 								</tr>
 								<tr>
 									<th><label for="id"> Email ID : </label></th>
-									<th>:&nbsp;<label for="id"> pavanpoojary@gmail.com
+									<th>:&nbsp;<label for="id"> ${user.emailid}
 									</label></th>
 								</tr>
 								<tr>
@@ -73,7 +73,7 @@
 								</tr>
 								<tr>
 									<th><label for="id"> Phone Number : </label></th>
-									<th>&nbsp;<label for="id"> 7666490917</label></th>
+									<th>&nbsp;<label for="id">${user.phonenumber}</label></th>
 								</tr>
 							</table>
 						</div>

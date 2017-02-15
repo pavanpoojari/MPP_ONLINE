@@ -77,7 +77,7 @@ public class Order implements Serializable{
 		this.noofcartitems = noofcartitems;
 	}
 
-	public String getPaymentdetails() {
+	public String getPaymentdetails(String string) {
 		return paymentdetails;
 	}
 

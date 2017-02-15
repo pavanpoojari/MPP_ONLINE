@@ -22,6 +22,7 @@
 	<webflow:flow-registry id="flowRegistry"
 		flow-builder-services="flowBuilderServices" base-path="/WEB-INF">
 		<webflow:flow-location id="register" path="/registerControl.xml" />
+		<webflow:flow-location id="addAddress" path="/cartControl.xml" />
 	</webflow:flow-registry>
 
 	<webflow:flow-builder-services id="flowBuilderServices"

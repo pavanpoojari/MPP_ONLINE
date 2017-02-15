@@ -24,18 +24,18 @@
 						<c:if test="${not empty existingProduct }"></c:if>
 						<c:choose>
 							<c:when test="${existingProduct == true }">
-								<button id="Bsize" style="border-radius: 2px" type="button"
-									class="btn btn-warning">
-									<span class="fa fa-cart-plus" style="font-size: 18px"></span>&nbsp;
+								<a id="Bsize" style="border-radius: 2px" type="button"
+									class="btn btn-warning" href="${contextRoot}/user/cart/">
+									<span class="fa fa-shopping-cart" style="font-size: 18px"></span>&nbsp;
 									Go to Cart
-								</button>
+								</a>
 							</c:when>
 							<c:otherwise>
-								<button id="Bsize" style="border-radius: 2px" type="button"
-									class="btn btn-warning">
+								<a id="Bsize" style="border-radius: 2px" type="button"
+									class="btn btn-warning" href="${contextRoot}/user/cart/add/${product.productId}">
 									<span class="fa fa-cart-plus" style="font-size: 18px"></span>&nbsp;
 									Add to Cart
-								</button>
+								</a>
 							</c:otherwise>
 						</c:choose>
 

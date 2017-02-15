@@ -1,1 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                           http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
+
+
+
+	<on-start>
+		<evaluate expression="cartFlow.initFlow()" result="flowScope.orderBean" />
+	</on-start>
+
+	<view-state id="start" view="cartwebFlow/paymentMode" model="flowScope.orderBean">
+		<transition on="continue" to="gateway"></transition>
+	</view-state>
+
+	<view-state id="gateway" view="cartwebFlow/orderSummary"
+		model="flowScope.orderBean">
+		<transition on="confirm" to="updateCart"></transition>
+	</view-state>
+
+	<action-state id="updateCart">
+		<evaluate expression="cartFlow.updateCart(flowScope.orderBean)"></evaluate>
+		<transition on="success" to="thankYou" />
+	</action-state>
+
+	<!-- Order confirmation and thank you page -->
+	<view-state id="thankYou" view="cartwebFlow/message">
+		<transition on="backToShopping" to="toHome"></transition>
+	</view-state>
+
+	<end-state id="toHome" view="externalRedirect:contextRelative:home" />
+	<end-state id="toException" view="externalRedirect:contextRelative:exception" />
+
+	<global-transitions>
+		<transition on="home" to="toHome" />
+		<transition on="error" to="toException" />
+	</global-transitions>
+</flow>

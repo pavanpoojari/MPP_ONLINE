@@ -5,10 +5,15 @@
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br>-->
 		<p>
-			&copy;&nbsp;Pavan Poojary. &nbsp;All Right Reserved&nbsp;&nbsp;&nbsp;<a href="#pavanpoojary"
-				data-toggle="tooltip" title="Visit Site">
+			&copy;&nbsp;Pavan Poojary. &nbsp;All Right Reserved&nbsp;&nbsp;&nbsp;<a
+				href="#pavanpoojary" data-toggle="tooltip" title="Visit Site">
 				&nbsp;&nbsp;&nbsp;www.pavanpoojary.in</a>
 		</p>
+
+		<a id="back-to-top" href="#" class="Barrow back-to-top" role="button"
+			data-toggle="tooltip" title="To Top" data-placement="left"> <b><span
+				class="fa fa-chevron-up"></span></b>
+		</a>
 	</div>
 </footer>
 <!-- End Of Footer -->

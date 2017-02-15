@@ -1,5 +1,7 @@
 package com.niit.ecom_ecart.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.backend.DAO.UserDAO;
-import com.niit.backend.entity.Developer;
-import com.niit.backend.entity.Product;
 import com.niit.backend.entity.User;
 
 @Controller
@@ -23,9 +23,11 @@ public class UserController {
 	private User user;
 
 	@RequestMapping(value = "/userprofile")
-	public ModelAndView Profile() {
+	public ModelAndView Profile(Principal principal) {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "User Profile");
+		user = userDAO.getByuserName(principal.getName());
+		mv.addObject("user", user);
 		mv.addObject("ifUserClickedProfile", true);
 		return mv;
 	}
@@ -54,9 +56,12 @@ public class UserController {
 		return mv;
 	}
 
-	@RequestMapping(value = { "/edit/billinginformation" }, method = RequestMethod.GET)
-	public ModelAndView editUser() {
+	@RequestMapping(value = { "/edit/billinginformation/{id}" }, method = RequestMethod.GET)
+	public ModelAndView editUser(@ModelAttribute User user, @PathVariable(name = "id", required = false) int id) {
 		ModelAndView mv = new ModelAndView("page");
+		user = userDAO.get(id);
+		mv.addObject("user", user);
+		
 		mv.addObject("title", "Edit User Profile");
 		mv.addObject("ifUserClickedUpdateProfile", true);
 		return mv;

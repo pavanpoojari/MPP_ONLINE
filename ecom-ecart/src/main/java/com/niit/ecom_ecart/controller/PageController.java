@@ -1,6 +1,9 @@
 package com.niit.ecom_ecart.controller;
 
 import java.security.Principal;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +17,7 @@ import com.niit.backend.DAO.CartItemDAO;
 import com.niit.backend.DAO.ProductDAO;
 import com.niit.backend.DAO.UserDAO;
 import com.niit.backend.entity.Cart;
+import com.niit.backend.entity.CartItem;
 import com.niit.backend.entity.Product;
 import com.niit.backend.entity.User;
 
@@ -41,10 +45,24 @@ public class PageController {
 	@Autowired
 	private Product product;
 
+	@Autowired
+	private HttpSession httpSession;
+
 	@RequestMapping(value = { "/", "/home", "/index", "/default" })
-	public ModelAndView index() {
+	public ModelAndView index(Principal principal) {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Home");
+		mv.addObject("products", productDAO.list());
+
+		if (principal != null) {
+			user = userDAO.getByuserName(principal.getName());
+			if (user.getCart() != null) {
+				List<CartItem> cartItems = cartItemDAO.list(user.getCart().getCartId());
+				if (cartItems != null) {
+					httpSession.setAttribute("noofcartItems", cartItems.size());
+				}
+			}
+		}
 		mv.addObject("ifUserClickedHome", true);
 		return mv;
 	}
@@ -97,7 +115,7 @@ public class PageController {
 			user = userDAO.getByuserName(principal.getName());
 			cart = cartDAO.get(user.getUserId());
 			product = productDAO.get(id);
-			boolean flag = cartItemDAO.existingCartItem(product.getProductId(), cart.getCartId());
+			boolean flag = cartItemDAO.existingCartItem(product.getProductId(), user.getCart().getCartId());
 			mv.addObject("existingProduct", flag);
 		}
 		mv.addObject("title", "Product");

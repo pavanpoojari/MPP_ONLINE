@@ -55,7 +55,7 @@ public class CartController {
 		user = userDAO.getByuserName(principal.getName());
 		mv.addObject("cartItem", new CartItem());
 		
-		List<CartItem> ci = cartItemDAO.list(cart.getCartId());
+		List<CartItem> ci = cartItemDAO.list(user.getCart().getCartId());
 		httpSession.setAttribute("noofcartItems", ci.size());
 		
 		mv.addObject("cartItems", cartItemDAO.list(user.getCart().getCartId()));

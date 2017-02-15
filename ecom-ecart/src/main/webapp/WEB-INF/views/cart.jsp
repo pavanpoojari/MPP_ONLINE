@@ -87,10 +87,10 @@
 					Continue Shopping
 				</button>
 				&nbsp;
-				<button type="submit" class="btn btn-warning" id="">
+				<a type="submit" class="btn btn-warning" href="${contextRoot}/addAddress">
 					<span class="fa fa-credit-card-alt" aria-hidden="true"></span>&nbsp;
 					Checkout Now
-				</button>
+				</a>
 			</div>
 		</div>
 	</div>
