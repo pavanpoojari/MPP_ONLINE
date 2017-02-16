@@ -85,7 +85,7 @@
 
 
 
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgRO2EnR4frPIZlS24UkKp9pM2b18rkQc"></script>
 <script>
 	// code for google map api
 	function initialize() {

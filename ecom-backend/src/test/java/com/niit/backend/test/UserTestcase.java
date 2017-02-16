@@ -37,7 +37,7 @@ public class UserTestcase {
 	 * user.setPassword("test"); user.setPhonenumber("9999944455");
 	 * user.setRole("USER"); user.setEnable(false); Assert.assertEquals(
 	 * "create test case", true, userDAO.create(user)); }
-	 */
+	 */	
 
 	// Delete UserTable
 	@Test

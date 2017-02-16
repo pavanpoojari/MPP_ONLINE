@@ -5,7 +5,7 @@
       <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br>-->
 		<p>
-			&copy;&nbsp;Pavan Poojary. &nbsp;All Right Reserved&nbsp;&nbsp;&nbsp;<a
+			&copy;All Right Reserved&nbsp;&nbsp;&nbsp;&nbsp;Pavan Poojary. <a
 				href="#pavanpoojary" data-toggle="tooltip" title="Visit Site">
 				&nbsp;&nbsp;&nbsp;www.pavanpoojary.in</a>
 		</p>

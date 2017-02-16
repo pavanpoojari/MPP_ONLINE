@@ -32,7 +32,7 @@
 
 				<sec:authorize access="isAnonymous()">
 
-					<li id="signup"><a href="register"><span
+					<li id="signup"><a href="${contextRoot}/register"><span
 							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
 					<li id="login"><a href="${contextRoot}/login"><span

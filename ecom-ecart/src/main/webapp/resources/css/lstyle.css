@@ -1,5 +1,5 @@
 body {
-	padding-top: 40px;
+	padding-top: 60px;
 	padding-bottom: 55px;
 }
 
@@ -241,7 +241,9 @@ a {
 .pad {
 	padding: 12px;
 }
-
+.pad1 {
+	padding: 0px;
+}
 .html5 {
 	padding: 0px;
 	width: 78%;
@@ -294,4 +296,121 @@ hr.smalls {
 
 .btn-rad {
 	border-radius: 40px;
+}
+
+.rad {
+	border-radius: 0px;
+}
+
+.modal-header-success {
+	color: #fff;
+	padding: 9px 15px;
+	border-bottom: 1px solid #eee;
+	background-color: #149c82;
+}
+
+.modal-content {
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+}
+
+.nav-tabs {
+	border-bottom: 2px solid #DDD;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	{
+	border-width: 0;
+}
+
+.nav-tabs>li>a {
+	border: none;
+	color: #666;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li>a:hover {
+	border: none;
+	color: #149c82 !important;
+	background: transparent;
+}
+
+.nav-tabs>li>a::after {
+	content: "";
+	background: #149c82;
+	height: 2px;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: -1px;
+	transition: all 250ms ease 0s;
+	transform: scale(0);
+}
+
+.nav-tabs>li.active>a::after, .nav-tabs>li:hover>a::after {
+	transform: scale(1);
+}
+
+.tab-nav>li>a::after {
+	background: #21527d none repeat scroll 0% 0%;
+	color: #fff;
+}
+
+.tab-pane {
+	padding: 15px 0;
+}
+
+.tab-content {
+	padding: 20px
+}
+
+.card {
+	background: #FFF none repeat scroll 0% 0%;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+	margin-bottom: 30px;
+}
+
+.parentimage {
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.parentimage:hover {
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1.5);
+}
+
+.modal-dialog {
+	overflow-y: initial !important
+}
+
+.modal-body {
+	height: 600px;
+	overflow-y: auto;
+}
+
+.modal {
+	max-height: 100%;
+}
+
+#screenshot-carousel.carousel .carousel-indicators>li {
+	background-color: #18bc9c;
+	border: none;
+}
+
+.carousel-caption {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.load {
+	background-position: center;
+	top: 50%;
+	left: 50%;
+	position: fixed;
 }

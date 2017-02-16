@@ -27,6 +27,9 @@
 				</div>
 				<!--End Of Search-->
 			</div>
+			<div class="load" ng-show="loading">
+				<img src="${images}/loader.gif">
+			</div>
 			<div class="col-md-3">
 				<div class="">
 					<!--Filter panel-->
@@ -72,7 +75,7 @@
 					<!--End Of Filter panel-->
 				</div>
 			</div>
-
+			
 			<!--div col-md-9-->
 			<div class="col-md-9">
 				<div class="">
@@ -94,13 +97,13 @@
 
 							<div ng-repeat="product in products | filter:searchTab">
 								<%-- <c:forEach items="${products}" var="product"> --%>
-								<div class="panel panel-default">
+								<div class="panel panel-default sha rad">
 									<div class="panel-body">
-										<div class="col-md-2" style="padding: 0px;">
+										<div class="col-md-3" style="padding: 0px;">
 											<img ng-src="${images}/product/{{product.productId}}.png"
-												alt="" width="120px" height="120px" />
+												alt="" width="160px" height="120px" />
 										</div>
-										<div class="col-md-6" style="padding: 0px;">
+										<div class="col-md-5" style="padding: 0px;">
 											<a ng-href="${contextRoot}/product/{{product.productId}}">{{product.name}}</a><br />
 											<div class="text-muted">{{product.description}}</div>
 										</div>
@@ -144,7 +147,7 @@
 								<%-- <c:forEach items="${products}" var="product"> --%>
 								<!--Product-->
 								<div class="col-sm-4 col-lg-4 col-md-5">
-									<div class="thumbnail">
+									<div class="thumbnail sha">
 										<img ng-src="${images}/product/{{product.productId}}.png"
 											alt="" />
 										<div class="caption">

@@ -8,19 +8,43 @@
 			<li data-target="#screenshot-carousel" data-slide-to="0"
 				class="active"></li>
 			<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+			<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+			<li data-target="#screenshot-carousel" data-slide-to="3"></li>
+			<li data-target="#screenshot-carousel" data-slide-to="4"></li>
 		</ol>
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="${images}/1.jpg" alt="1">
+				<img src="${images}/co/1.jpg" alt="1">
 				<div class="carousel-caption">
 					<h2>First image</h2>
 					<h3>The Caption</h3>
 				</div>
 			</div>
 			<div class="item">
-				<img src="${images}/2.jpg" alt="2">
+				<img src="${images}/co/2.jpg" alt="2">
 				<div class="carousel-caption">
 					<h2>Second image</h2>
+					<h3>The Caption</h3>
+				</div>
+			</div>
+			<div class="item">
+				<img src="${images}/co/3.jpg" alt="2">
+				<div class="carousel-caption">
+					<h2>Third image</h2>
+					<h3>The Caption</h3>
+				</div>
+			</div>
+			<div class="item">
+				<img src="${images}/co/4.jpg" alt="2">
+				<div class="carousel-caption">
+					<h2>Fourth image</h2>
+					<h3>The Caption</h3>
+				</div>
+			</div>
+			<div class="item">
+				<img src="${images}/co/5.jpg" alt="2">
+				<div class="carousel-caption">
+					<h2>5th image</h2>
 					<h3>The Caption</h3>
 				</div>
 			</div>
@@ -59,12 +83,11 @@
 				</div>
 				<div class="text-right"
 					style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px">
-					<a type="submit" class="btn btn-info" href="#">
-						<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-					</a>
-					&nbsp;
-					<a type="submit" class="btn btn-warning" href="${contextRoot}/user/cart/add/${product.productId}">
-						<span class="fa fa-cart-plus" aria-hidden="true"></span>
+					<a type="submit" class="btn btn-info" href="#"> <span
+						class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+					</a> &nbsp; <a type="submit" class="btn btn-warning"
+						href="${contextRoot}/user/cart/add/${product.productId}"> <span
+						class="fa fa-cart-plus" aria-hidden="true"></span>
 					</a>
 				</div>
 			</div>
